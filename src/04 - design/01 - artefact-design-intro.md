@@ -2,22 +2,8 @@
 
 #### 3.1 Introduction
 
-In Chapter 2 we identified that ...
+In the previous chapter it was identified that altmetrics are a new approach to the field of measuring scientific impact, using an array of web-based services to discover impact. Altmetrics were found to be an alternative to traditional forms of impact measurement, such as the impact factor, improving the speed, diversity and - in some cases - accuracy of impact measurements.
 
-This chapter describes the design of ..., a system that ... . First, the chapter describes the project's design methodology (see section 3.2), and system requirements (see section 3.3). A proposed solution is then discussed (see section 3.4) followed by a ...
+It was found that there is little study of how altmetrics change over time. To approach this subject, tools are required to help kick-start research. Altmetrics generate large amounts of data that can be difficult to analyse, therefore visualisation tools are needed to assist in the analysis. This especially true if altmetrics are to be used for qualitative assessment, not just for quantitative assessment - another conclusion reached in the previous chapter. 
 
-* Identified that:
-	* Altmetrics are good for improving the speed, diversity and accuracy of impact measurements
-	* Little or no research into how altmetrics change over time
-		* Tools are required
-			* Lots of data to analyse
-			* Better to visulise
-			* Altmetrics emphasise the qualitative assessment of impact, not just quantitative
-		* A tool that visualises how altmetric data sources change over time
-	* Tools for collating data already exist
-		* ImpactStory, PLOS ALM
-		* Difficult to track accurately
-			* Especially with historical data
-		* Provide APIs
-	* Transparency is good for altmetrics
-		* Open source
+In this chapter, the design of a system for visualising how altmetric data sources change over time, will be discussed. The first section will describe the project's design methodology (section 3.2), and then the system's requirement's will be discussed (section 3.3). Finally, a solution is proposed in section 3.4. 

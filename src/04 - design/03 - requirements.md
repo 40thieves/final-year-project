@@ -33,3 +33,10 @@ The main purpose of ...
 	* Open source
 		* Methods available under a open, permissive license
 		* Allows users to inspect methods of generation/interpretation
+* Tools for collating data already exist
+	* ImpactStory, PLOS ALM
+	* Difficult to track accurately
+		* Especially with historical data
+	* Provide APIs
+* Transparency is good for altmetrics
+	* Open source
