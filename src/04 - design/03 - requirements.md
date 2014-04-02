@@ -1,42 +1,78 @@
 #### 3.3 Requirements
 
-The main purpose of ...
+The main purpose of the system is to provide tools for those investigating altmetrics. To achieve this, there are many requirements that are described in this section. Each requirement is numbered, for referencing later.
 
-* System requirements
-	* Allow users to find scholarly articles to get altmetrics data for
-		* Must be able to find articles from a large, representative sample
-		* Application has form for input of search parameters
-	* Visualises how altmetrics change over time
-		* Can show multiple articles at once
-		* Easy to control the changes over time
-			* Easy to move time back and forward
-		* Comparison/validation against citation counts
-			* Enables users to see how changes in altmetric data sources affect the overall citation count
-		* Can switch between various altmetrics data sources
-		* Be able to show article details
-	* Altmetrics data collated from various altmetrics data sources
-		* Must include historical data
-			* When altmetric citations occurred
-			* Split at least yearly - the citation numbers are recorded every year, or sooner (i.e. every month/day)
-		* Altmetrics data for a representative sample of articles
-		* Should be relatively fast to collect data
-			* Don't regenerate every time
-	* Allow users to save their results for later
-		* Can reuse/bookmark
-			* Allows users to demonstrate altmetrics impact to assessors
-		* Permalink
-		* Store altmetrics data in a database
-			* Don't have to regenerate every time
-			* Can handle JSON data well
-	* Easy to use
-		* Easily understandable by people not familiar with technical altmetrics terms
-	* Open source
-		* Methods available under a open, permissive license
-		* Allows users to inspect methods of generation/interpretation
-* Tools for collating data already exist
-	* ImpactStory, PLOS ALM
-	* Difficult to track accurately
-		* Especially with historical data
-	* Provide APIs
-* Transparency is good for altmetrics
-	* Open source
+As described in section 3.2, the requirements changed as research progressed. The project is driven primarily by this research, and therefore system requirements could not be developed until after some study has been completed. It became clear that, as research developed, there is little study of how altmetrics change over time, which lead to focussing the system towards providing a tool that visualises how altmetrics change over time. Similarly, after research was conducted, several APIs were found that provide altmetrics data, thereby removing the requirement for a system to generate altmetrics data. The following requirements are taken from the latest and most up-to-date set of requirements.
+
+##### 1. Visualisation of altmetrics data sources
+
+It was found in section 3.6 that more tools for analysing and visualising altmetrics data are required. In addition, it was found that validation of altmetrics is required for analysis to be accepted more widely. The system, therefore, must provide a mechanism for showing a visualisation of altmetrics data, with some validation of the data.
+
+As discussed in section 3.2, altmetrics assessment is often performed on a body of work, such as an author's career output. Therefore, the system must be able to provide a visualisation for multiple articles of interest. The system will generate a graph using altmetrics data from these selected articles.
+
+The graph will show values from two altmetric data sources for each article on two axis. Users are able to change the visualised data source according to their preference, allowing them to focus on data sources that are relevant for their current assessment. This falls in line with conclusions discussed in section 3.6, where providing context for altmetric values was emphasised.
+
+A third axis will show the number of citations for the article, so that the altmetric data sources can be compared to a more traditional measure of impact. As discussed in section 3.6, citation counts are often used as a validation measure to compare against altmetrics data.
+
+Finally, the visualisation must have a method for associating with the original article set, giving each article's title and final metric values. This allows the user to associate a paper with it's visualisation.
+
+##### 2. Visualisation of altmetrics changing over time
+
+As discussed in section 3.6, there has been little or no study of the temporal aspect of altmetrics. The previous requirement discussed the need for a visualisation of altmetrics data, which can be extended to meet this requirement.
+
+The system will provide a fourth axis for the graph, for the current time, and can be changed by the user. Data on the graph will be shown for the current time. For example, if this time axis shows the year 2009, then the altmetric data for 2009 will be shown on the graph. The current time will be shown on the graph, allowing the user to easily identify what the current time is.
+
+The user will be able to easily change this axis, moving back and forward in time. This allows them to perform a comparison as the data changes over time. In this way, the recommendations in section 3.6 are achieved.
+
+##### 3. Scholarly article search
+
+Users of the system must be able to find articles that they wish to visualise altmetrics for, therefore a search for scholarly papers is required. A search form must be provided for the user, to input parameters for their query. The form must contain fields for article title, author, journal, subject area, publication date, DOI and keyword.
+
+As discussed in section 2.2, altmetrics assessment is often performed on a body of work, such as an author's career output. Therefore, users must be able to identify multiple articles of interest, that altmetrics data is to be generated for.
+
+The search should return articles in an identifiable manner. Articles must be uniquely addressable, so that one article can be distinguished from another. In the academic fields this is achieved using the Digital Object Identifier (DOI) System, standardised under ISO 26324. To conform with this standard, the system will return a list of DOIs that match the search parameters.
+
+##### 4. Altmetrics data collection
+
+As is evident in the previous requirements, altmetrics data is required for this system. This data could be generated by the system itself, by querying the APIs of the various services described in section 3.3 and building it's own altmetrics data. However, as described in section 3.4, there are several technical problems with collecting this data. In addition, it would take time and resources to create this data that are unavailable for this project. There are existing altmetrics providers that have built their own data stores which can be queried to collect this data, each of which will be assessed for suitability with this project (see requirement 10).
+
+The system must pass the DOIs of the selected articles to a provider API. The system must then provide a way of accessing data from these providers for the selected articles. Finally, the system must be able to interpret their response, for use in the visualisation.
+
+##### 5. Storage of results
+
+The system must provide a way of saving visualisation results so that users can revisit later. If no storage was provided, altmetrics data would need to accessed from the provider every time the visualisation results were viewed. This creates unnecessary network traffic and would significantly slow down the application.
+
+In addition, the system must provide a mechanism for accessing the resulting visualisation after generating it. This will be done using a permalink - a URL that will show the user the same visualisation, using the same altmetrics data every time the URL is visited. This allows users to demonstrate altmetrics impact to assessors without having to regenerate the data every time.
+
+##### 6. Easy to use
+
+The system must be easily understandable by users who are not familiar with technical altmetrics terms, and those outside of the technology industry. The project is aimed at users in scientific fields, who do not have a background in computer science and therefore cannot be expected to understand complex systems or obscure vocabulary.
+
+As part of this requirement, the system must have good visual design. Scientific software is not known for it's striking visuals, and therefore a well designed, clean layout will attract users to the system, increasing it's popularity.
+
+##### 7. Open source
+
+As discussed in sections 3.4 and 3.6, transparency is a founding principle of altmetrics. The altmetrics community supports the use of permissive open source licenses, as they allow users to inspect how metrics were collected and calculated. Ultimately, this transparency enhances trust in altmetrics.
+
+For these reasons, source code for the system must be released under an open source license, as defined by the Open Source Initiative (OSI). The OSI has several compatible licenses listed on it's website.
+
+##### 8. Suitability of Node.js for this project
+
+As will be discussed in section 4.4, the system will be created using the server-side Javascript platform, Node.js. The project must evaluate whether Node.js is suitable for applications of this nature.
+
+For Node.js to be considered suitable, it must provide a platform that can be quick and easily built upon to construct an application such as the one described in the requirements above. The platform must enable applications to be well structured and efficient.
+
+##### 9. Suitability of D3.js for this project
+
+Similar to requirement 8, D3.js will be used to provide the visualisation required for this project, and this Javascript library will be evaluated to see whether it is suitable for creating visualisations. As described in requirements 1 and 2, a complex graph will be built using a large amount of altmetrics data. If D3.js can provide a stable and efficient platform for creating such graphs, then it can be considered suitable.
+
+##### 10. Assessment of existing altmetrics providers
+
+As discussed in requirement 4, altmetrics data will be sourced from an altmetrics provider. The PLOS ALM API, the ImpactStory API and the Altmetric.com API all provide access to this data, with varying levels of compatibility for this project. They will be compared to see which is the most suitable for this implementation.
+
+The selected provider must include historical data, where metadata on when altmetric citations occurred. For example, the API would provide a breakdown of each data source, showing the increase in altmetric citations for each year. This breakdown must be no longer than a year, otherwise any analysis would be too general to be useful. The system requires this to be able to show the difference in altmetrics data between time periods, as discussed in requirement 2.
+
+In addition, the provider must be able to provide altmetrics data for a representative sample of articles. Altmetrics data can be time-consuming and resource-heavy to generate, and therefore it can be expected that not every article ever published will be covered by the provider. However, users must be able to access data for a reasonable set of articles.
+
+Finally, the provider must offer data for a useful set of altmetric data sources (see section 3.3). If a provider only tracks altmetric citations from a small group of data sources, then some diversity and context is lost from the analysis. As discussed in section 3.6, this is a core concept within in altmetrics, so if significantly lost, the provider would become unsuitable for this project.
+

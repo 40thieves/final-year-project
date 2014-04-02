@@ -43,6 +43,8 @@
 		* Includes historic data
 			* When citation occurred
 			* Taken every month/year
+		* Difficult to track altmetrics accurately - so use API instead
+			* Especially with historical data
 	* Write a wrapper around the API
 		* Makes it easy to query
 		* Abstracts the details of the implementation
@@ -83,3 +85,4 @@
 	* Provide permalink for data
 		* Can be bookmarked/saved/reused later very easily
 		* No regeneration of data
+* Node
