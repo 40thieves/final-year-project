@@ -13,3 +13,17 @@ This section reviews the implemented platform, referring back to the requirement
 ##### 5.3.2 Artefact Review
 
 In this section, we evaluate the implementation of ... and review the prevailing issues that were highlighted by the implementation, which were ...
+
+* Use PLOS Search API
+	* Can only search for PLOS articles
+		* Large sample
+		* Maybe biased?
+			* Open access
+			* Free - higher metrics
+		* However because they're all open access, would be normalised/accounted for
+* Async
+	* Difficult
+	* "Pyramid of doom"
+* PLOS ALM API
+	* Returned errors when calculating large amount of data
+		* Seemed to fix by requesting specific data sources
