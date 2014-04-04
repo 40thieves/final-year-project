@@ -6,13 +6,13 @@ As described in section 3.2, the requirements changed as research progressed. Th
 
 ##### 1. Visualisation of altmetrics data sources
 
-It was found in section 3.6 that more tools for analysing and visualising altmetrics data are required. In addition, it was found that validation of altmetrics is required for analysis to be accepted more widely. The system, therefore, must provide a mechanism for showing a visualisation of altmetrics data, with some validation of the data.
+It was found in section 3.6 that more tools for analysing and visualising altmetrics data are required. In addition, it was found that validation of altmetrics is required for analysis to be accepted more widely. The system, therefore, must provide a mechanism for showing a visualisation of altmetrics data, with some validation of the data. The visualisation must allow for some comparison of article altmetrics.
 
-As discussed in section 3.2, altmetrics assessment is often performed on a body of work, such as an author's career output. Therefore, the system must be able to provide a visualisation for multiple articles of interest. The system will generate a graph using altmetrics data from these selected articles.
+As discussed in section 3.2, altmetrics assessment is often performed on a body of work, such as an author's career output. Therefore, the system must be able to provide a visualisation for multiple articles of interest. The system will generate a graph using altmetrics data from these selected articles. This allows the user to compare altmetrics data between these articles.
 
-The graph will show values from two altmetric data sources for each article on two axis. Users are able to change the visualised data source according to their preference, allowing them to focus on data sources that are relevant for their current assessment. This falls in line with conclusions discussed in section 3.6, where providing context for altmetric values was emphasised.
+In addition, altmetrics researchers may only wish to focus on a subset of altmetric data sources (see section 2.6), or they may want to directly compare altmetric data sources. The system must provide a mechanism for this, by allowing the user to switch between altmetric data sources.
 
-A third axis will show the number of citations for the article, so that the altmetric data sources can be compared to a more traditional measure of impact. As discussed in section 3.6, citation counts are often used as a validation measure to compare against altmetrics data.
+The visualisation must also show the total number of scholarly citations for the article, so that the altmetric data sources can be compared to a more traditional measure of impact. As discussed in section 3.6, citation counts are often used as a validation measure to compare against altmetrics data.
 
 Finally, the visualisation must have a method for associating with the original article set, giving each article's title and final metric values. This allows the user to associate a paper with it's visualisation.
 

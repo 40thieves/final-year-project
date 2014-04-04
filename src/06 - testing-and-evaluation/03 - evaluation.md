@@ -27,3 +27,4 @@ In this section, we evaluate the implementation of ... and review the prevailing
 * PLOS ALM API
 	* Returned errors when calculating large amount of data
 		* Seemed to fix by requesting specific data sources
+* Accessibility
