@@ -1,3 +1,0 @@
-#### 4.3 Interesting Problems
-
-During the project implementation several issues were identified that merit discussion. This section addresses these topics, which are ...

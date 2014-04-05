@@ -14,6 +14,12 @@ This section reviews the implemented platform, referring back to the requirement
 
 In this section, we evaluate the implementation of ... and review the prevailing issues that were highlighted by the implementation, which were ...
 
+* Data collection
+	* Problems with API
+		* Sometimes produces errors if specific data sources are not requested
+			* Adding data sources seems to work fine, even if large list is requested
+				* _Not good for API, however heavy usage is not expected_
+				* May have improved - was there a blog post (or github issue) about how they're going to improve it?
 * Use PLOS Search API
 	* Can only search for PLOS articles
 		* Large sample
@@ -21,6 +27,8 @@ In this section, we evaluate the implementation of ... and review the prevailing
 			* Open access
 			* Free - higher metrics
 		* However because they're all open access, would be normalised/accounted for
+	* Don't return HTTP error codes
+		* Errors have to be detected in the response (which is 200 OK)
 * Async
 	* Difficult
 	* "Pyramid of doom"
