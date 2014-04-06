@@ -29,6 +29,8 @@ In this section, we evaluate the implementation of ... and review the prevailing
 		* However because they're all open access, would be normalised/accounted for
 	* Don't return HTTP error codes
 		* Errors have to be detected in the response (which is 200 OK)
+	* Search results not paginated
+		* What happens if you put in something really generic & get lots of results
 * Async
 	* Difficult
 	* "Pyramid of doom"
