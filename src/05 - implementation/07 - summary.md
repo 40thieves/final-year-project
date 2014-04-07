@@ -1,4 +1,4 @@
-#### Summary
+#### 4.7 Summary
 
 This chapter describes the implementation of the application, which is based on the design discussed in Chapter 3. Implementation of the altmetrics data collection API wrapper is described in section 4.2, and the search API wrapper is described in section 4.3. The application's visualisation and storage implementations were discussed in sections 4.4 and 4.5 respectively. Finally, implementation details of the web application were described in section 4.6.
 
