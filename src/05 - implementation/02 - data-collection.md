@@ -69,6 +69,9 @@ Foo.prototype.aFunc = function() {
 
 However, this can become complicated when using prototyped method and non-prototyped methods. In locally declared functions the `this` keyword loses it's reference to the class - as it's technically not part of the class. Fortunately Javascript provides a way of mitigating this. The `bind` and `call` functions provide different systems for ensuring that the `this` keyword is bound to the desired reference. These are used in the wrapper package to maintain a consistent reference to the `this` keyword throughout the module.
 
+* Consistent style
+	* i.e. all code written in the same style
+
 ##### 4.2.2 Event Based Structure
 
 For the first iteration of the API wrapper, a procedural structure was adopted. For this structure, the module would be called procedurally, using a `getAlm` method, providing a list of DOIs and callback function. This would then bootstrap the module, call the API, process the results and call the callback when finished. This callback would be populated with the results, or if an error occurred, an error object. The follow example demonstrates this functionality.
@@ -108,4 +111,7 @@ These callbacks split the duties performed by the callback for the `getAlm` meth
 The PLOS ALM API is a good base for providing altmetrics data, as discussed in section 3.4.5, however it is not without problems. The main problem that was encountered was when querying for many articles with historical metadata in a single request. This will sometimes produce an error response, although it may be inconsistent. This may be due to the fact that a very large amount of data needs to be processed and so the request times out. Alternatively, there may be a bug with the API that causes this intermittently.
 
 Fortunately, there does appear to be a work-around - the API allows users restrict the data sources that are included in the response. If the request includes `source=twitter`, for example, then only altmetric data pertaining to Twitter will be returned. This can be expanded to include multiple data sources, using a comma-separated list. In testing it was found that including a list for all possible data sources would not produce the error described above. This work-around has been implemented in the package as a temporary solution, but will be removed if the problem is resolved. The bug has been reported to the API providers.
+
+* request library
+	* How requests are actually sent
 

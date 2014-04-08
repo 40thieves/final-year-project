@@ -327,3 +327,5 @@ expect('test').to.be.a('string');
 expect(foo).to.exist;
 ```
 
+These libraries were chose because of their popularity, flexibility and ease of use. Mocha is widely used among the Node.js developer community. It is popular due to it's rich feature list, and flexibility. Mocha allows developers to choose which assertion library they wish to test with. This is unlike the also popular Jasmine library, which provides a complete all-in-one framework for tests. The Chai library was chosen for it's readable tests. As is shown in the above example, Chai tests can be very similar to sentences, an improvement over the "assert" style of other libraries.
+

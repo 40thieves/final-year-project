@@ -83,3 +83,8 @@ Another problem, of lesser significance, is that the data is structured so that 
 
 To counter these problems, filtering of the data is required. The library maps over each article in the data and converts the array to an associative object, using the data source's name as a key. This solves the second problem, allowing data sources to be selected by name, not index number. The first problem is countered by iterating through each data source and filtering out data sources with `null` historical data values. If a historical data value is found, a running total is created that converts the values to a cumulative number.
 
+* Interpolation
+	* Show the algorithm
+	* Why was it chosen
+		* No better model exists
+
