@@ -70,3 +70,5 @@ There is, however, a major drawback with Bower. Downloaded packages can only be 
 
 These files could be moved manually, however the purpose of Bower is to automate such tasks. Instead, a Grunt plugin, called grunt-bower-task, is used that will run Bower commands then move libraries to their desired directories. This plugin can be configured to layout libraries by type (Javascript or CSS), copying downloaded libraries from the `bower_components` directory to the relevant directory in `public`. For this application, this plugin will be run when the `grunt build` command is executed. It is frustrating that Bower does not provide this functionality, and an external plugin must be used to perform tasks that seem somewhat basic.
 
+* Handlebars
+
