@@ -102,6 +102,8 @@ Requirement 4 describes the need for altmetrics data collection from an external
 	* Rate limits
 		* Altmetric.com rate limits are lower - "significantly higher if using an api key"
 	* ImpactStory api (does it still exist?)
+	* PLOS ALM API
+		* Github issue about v3 which will include historical metadata for all data sources
 
 From the table it is clear that, for this project, the most appropriate solution is the PLOS Article Level Metrics (ALM) API. Crucially, it provides historical metadata, about when altmetric citations occurred. This is obviously important as the system must be able to show altmetrics changing over time, and that cannot be achieved without this data. The PLOS ALM API also gives a more detailed breakdown of when citation occurred. Citation numbers are given every month (or every year) for each data source, whereas Altmetric.com's API only gives aggregate numbers for all data sources at set points after publication (each day in the first week, 1 month after, 3 months after, 6 months after and 1 year after). The rate limits when compared with the Altmetric.com API are much higher, beyond the greatest expected usage and so they do not need to be considered.
 

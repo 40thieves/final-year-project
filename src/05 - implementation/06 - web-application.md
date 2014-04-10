@@ -6,11 +6,26 @@ This section will discuss the implementation of the web application that was des
 
 Figure 4.2 shows the flow of the application. Users are presented with the home page, containing the search form. When this is submitted, the search parameters are sent to the search API wrapper. Articles returned from the API are then presented to the user in a list. Users can review this list and select articles that they wish to view altmetrics data for. This list of selected articles is sent to the altmetrics data collection API wrapper. Data returned from this wrapper is stored in the database. This generates a unique key for the data, which is used to create a permalink for this dataset. Users are then redirected to the permalink where the visualisation is shown.
 
-* Application flow
+* Application flow diagram
 	* How data is moved around in the application
 	* The links that they click to get to permalink
 	* _Diagram showing application flow_
 	* Differences in flow for AJAX and non-AJAX users
+* Other notes
+	* Express
+		* Routes
+		* Controllers
+
+The web site was constructed with a progressive enhancement approach, where pages are constructed in a layered fashion. This means that basic support for all clients is provided by HTML. This is visually enhanced with CSS, and then behaviour is added using Javascript. These enhancement steps are not required for the core functionality to work, allowing the web site to work on any browser. Each page is constructed to be semantic, giving meaning to a page without using visual design.
+
+For this application, the functionality is slightly different depending on whether Javascript is enabled on the browser. For example, if turned off, the browser will make a POST request when the selected articles are submitted. When Javascript is turned on, this submit event is captured using an event listener and an XMLHttpRequest will be sent instead. This allows the client-side code to show a "Loading" view while the data is processed, instead of the default loading behaviour of the browser. This improved usability for clients that can use Javascript while providing the functionality to all clients.
+
+* Progressive enhancement routes
+	* API/non-API
+* Exception
+	* D3
+		* Wouldn't work without JS turned on
+		* Couldn't think of a way around this
 
 ##### 4.6.2 Search Results Page
 

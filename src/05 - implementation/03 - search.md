@@ -38,3 +38,7 @@ catch (err) {
 }
 ```
 
+* Search API doesn't return HTTP error codes
+	* Just 200 with a message in the body
+	* Have to parse response to check for errors
+

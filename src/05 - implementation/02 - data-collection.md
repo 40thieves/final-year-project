@@ -108,10 +108,12 @@ These callbacks split the duties performed by the callback for the `getAlm` meth
 
 ##### 4.2.3 API Problems
 
-The PLOS ALM API is a good base for providing altmetrics data, as discussed in section 3.4.5, however it is not without problems. The main problem that was encountered was when querying for many articles with historical metadata in a single request. This will sometimes produce an error response, although it may be inconsistent. This may be due to the fact that a very large amount of data needs to be processed and so the request times out. Alternatively, there may be a bug with the API that causes this intermittently.
+The PLOS ALM API is a good base for providing altmetrics data, as discussed in section 3.4.5, however it is not without problems. The main problem that was encountered was when querying for many articles - over 20 -  with historical metadata in a single request. This will sometimes produce an error response, although it may be inconsistent. This may be due to the fact that a very large amount of data needs to be processed and so the request times out. Alternatively, there may be a bug with the API that causes this intermittently.
 
 Fortunately, there does appear to be a work-around - the API allows users restrict the data sources that are included in the response. If the request includes `source=twitter`, for example, then only altmetric data pertaining to Twitter will be returned. This can be expanded to include multiple data sources, using a comma-separated list. In testing it was found that including a list for all possible data sources would not produce the error described above. This work-around has been implemented in the package as a temporary solution, but will be removed if the problem is resolved. The bug has been reported to the API providers.
 
+* Best practice
+	* Library in lib directory, app.js file imports the necessary files
 * request library
 	* How requests are actually sent
 * Mention Cameron Neylon's pyalm
