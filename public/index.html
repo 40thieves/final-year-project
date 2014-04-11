@@ -204,7 +204,7 @@ This chapter introduces the overarching themes of this report and places the mot
 <h4 id="2-1-history-of-bibliometrics">2.1 History of Bibliometrics</h4>
 <h5 id="2-1-1-introduction-to-bibliometrics">2.1.1 Introduction to Bibliometrics</h5>
 <p>The field of bibliometrics, sometimes scientometrics, has existed for many years and has created a set of methods to quantitatively analyse scientific and technological literature (De Bellis, 2009). These metrics are most commonly used to measure the impact, or value, of the research in question. Fenner (2013) defines impact as follows: &quot;The scientific impact of a particular piece of research is reflected in how this work is taken up by the scientific community&quot;. This impact ranking has a diverse set of applications, including assessment of an author&#39;s work. Godin &amp; Dore (2004) find that there is &quot;there is huge demand for quantitative studies and indicators on the impact of science&quot;, with most aimed at the economic impact of research. They state that research has, and continues to be, funded on the basis that it has outcomes in society. One of the most widely used methods is the Impact Factor, sometimes known as the Journal Impact Factor.  It was first proposed by Eugene Garfield in 1972, in his paper, Citation Analysis As A Tool in Journal Evaluation. The impact factor is calculated using the following algorithm:</p>
-<p><img src="img/impact-factor.png" alt="Impact Factor algorithm"></p>
+<p><img src="../../src/img/figure2-1.png" alt="Impact Factor algorithm"></p>
 <p>The Journal Citation Reports is published annually by Thomson Reuters, listing all known journals and giving their impact factor, and other metrics for the current year. Neylon and Wu (2009) state that &quot;most scientists ... will point to the Thomson ISI Journal Impact Factor as an external and &#39;objective&#39; measure for ranking the impact of specific journals and the individual articles within them&quot;.</p>
 <p>Usage of the impact factor in ranking research other than journals has become more widespread. Increasingly, impact factor has become a proxy for measuring many diverse research outputs. These range from comparisons of international impact to individual article value (Fuyuno &amp; Cyranoski, 2006) (Arnold &amp; Fowler, 2010) (Garfield, 2006). Article value is calculated by proxy, by simply taking the impact factor from the journal it was published in. This has lead to ranking author value, by totalling the impact factor of each paper published.</p>
 <p>Because of it&#39;s wide-ranging use, the impact factor has a strong influence on the scientific community. This has affected decisions on where to publish, whom to promote or hire, the success of grant applications, library decisions to purchase and renew journal subscriptions, researchers deciding where to publish, researchers choice on what to read and even salary bonuses (Van Epps &amp; Hill, 2007) (Arnold &amp; Fowler, 2010). The Public Library of Science (PLOS) Medicine editors (2006) report that &quot;in some countries, government funding of entire institutions is dependent on the number of publications in journals with high impact factors&quot;.</p>
@@ -354,7 +354,7 @@ This chapter introduces the overarching themes of this report and places the mot
 <p>Areas of disagreement exist, for example, Priem &amp; Hemminger (2010) include social news sites such as Reddit and Digg in the shared/recommended category, whereas most other studies do not. This may be because the popularity of this market has waned recently. They also include Wikipedia, as do ImpactStory, although in separate categories.</p>
 <p>A concept that is revealed through classification of altmetric data sources is a hierarchy of engagement. It is intuitive that formally citing an article shows more engagement with the work than sharing the article on Twitter, and in turn, more engagement than simply reading the article (Lin &amp; Fenner, 2013). Fenner (2013) finds that the average ratio of citations to article views is 1 to 300.</p>
 <p>It could be argued that this higher engagement shows higher impact. However, some find that simply classifying impact generates value by putting it into context (&quot;ImpactStory: FAQ&quot;, n.d.). Additionally, by definition, the access to the tools that show higher levels of engagement - not everyone can write a research paper in which to cite. To combat this, ImpactStory splits it&#39;s categories into data sources that affect scholars and the public. They suggest &quot;categorizing metrics along two axis: engagement type and audience&quot; (&quot;A new framework for altmetrics&quot;, 2012).</p>
-<p><img src="img/impact-story.png" alt="Categorisation of altmetric sources by ImpactStory"></p>
+<p><img src="../../src/img/figure2-2.png" alt="Categorisation of altmetric sources by ImpactStory"></p>
 <p>Similarly, Lin &amp; Fenner (2013) distinguish between primary metrics, &quot;the raw counts of activity captured by each source&quot;, and secondary metrics &quot;comprised of descriptive statistics that give context to the primary metrics&quot;, giving an example of average usage of similar papers.</p>
 <h5 id="2-2-10-timeline-of-usage">2.2.10 Timeline of Usage</h5>
 <p>Yan &amp; Gerstein (2011) find that usage of a scholarly article over time generally follows a &quot;long tail&quot; distribution, where &quot;on average, the older a paper is, the less attention it receives&quot;. The decline in usage drops rapidly in the first few months, after which the pace of decline slows. They further find that once a user has accessed an article, they may spread the information to others, again supporting the hierarchy of data sources model.</p>
@@ -1295,7 +1295,8 @@ var Storage = {
 <p>An evaluation of ... was then presented in Section y. Section z revisited the requirements described in Chapter 3 and identified that ... . Finally in Section a, the aspects of ... were discussed.<br></p>
 <h3 id="chapter-6-conclusion">Chapter 6 Conclusion</h3>
 <h4 id="6-1-introduction">6.1 Introduction</h4>
-<p>In this Chapter, we first summarise the work described in this report (Section x). Then we draw a number of conclusions about key parts of the work undertaken in Section y, and finally in Section z we discuss future work and how we see ... helping support projects such as this one.<br></p>
+<p>In this Chapter, we first summarise the work described in this report (Section x). Then we draw a number of conclusions about key parts of the work undertaken in Section y, and finally in Section z we discuss future work and how we see ... helping support projects such as this one.</p>
+<p><br></p>
 <h4 id="6-2-summary">6.2 Summary</h4>
 <!-- This is a summary of each chapter intro and summary -->
 
@@ -1303,7 +1304,8 @@ var Storage = {
 <p>Chapter 2 reviewed the state-of-the-art in ... . ... Was introduced and ... described. The potential for ... was highlighted.</p>
 <p>Chapter 3 describes the design of ... . The separate functions of ... that support the requirements were then described in more detail, including ...</p>
 <p>Chapter 4 described the implementation ...</p>
-<p>Chapter 5 presented a series of test that demonstrate ...<br></p>
+<p>Chapter 5 presented a series of test that demonstrate ...</p>
+<p><br></p>
 <h4 id="6-3-conclusions">6.3 Conclusions</h4>
 <p>The aim of this project was to ... . We chose to focus on ... </p>
 <p>We then designed and implemented a system that could:</p>
@@ -1323,8 +1325,7 @@ var Storage = {
 <li>Visualisation<ul>
 <li>Further work<ul>
 <li>Interpolation<ul>
-<li>Improving the model used to calculate interpolated values<br><h3 id="chapter-7-references">Chapter 7 References</h3>
-</li>
+<li>Improving the model used to calculate interpolated values</li>
 </ul>
 </li>
 </ul>
@@ -1332,8 +1333,12 @@ var Storage = {
 </ul>
 </li>
 </ul>
-<p><!-- Boakes R J, Thesis Template (delete this and replace with your own). -->
-<!-- Remember: Harvard APA 6th ed. --><br></p>
+<p><br></p>
+<h3 id="chapter-7-references">Chapter 7 References</h3>
+<!-- Boakes R J, Thesis Template (delete this and replace with your own). -->
+<!-- Remember: Harvard APA 6th ed. -->
+
+<p><br></p>
 <h3 id="appendices">Appendices</h3>
 <ul>
 <li>Screencast/video of visualisation?</li>
