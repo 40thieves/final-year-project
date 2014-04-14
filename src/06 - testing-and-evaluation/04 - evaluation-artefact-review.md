@@ -54,30 +54,51 @@ As discussed in section 4.5, the proposed solution for this implementation did n
 
 The parts of the application described above need to be combined and controlled to provide an interface between them and the user. This is provided by the web application, controlling the flow of data between the individual modules and the web pages that allow the user to interact with the system. The implementation is constructed on the Node.js platform, using the Express web application framework. The application provides a system of routes and controllers that listen for HTTP requests and respond accordingly. Web pages are served on appropriate endpoints, which are constructed from templates so that they contain the correct information.
 
-The web site was constructed with a progressive enhancement approach, where pages are constructed in a layered fashion. The server implementation therefore had to handle requests from "regular" HTTP requests and asynchronous requests (via XMLHttpRequest). These were given separate routes as they could potentially return data in different formats. Requests to the `/api` routes always return data in JSON format. This means that the application can very effectively take a progressive enhancement approach. The Express framework makes this relatively easy. The one exception to this rule is the visualisation page, which requires Javascript and SVG support. Unfortunately, D3.js depends on being able to use these relatively new features of the web, and so a true progressive enhancement approach could not be taken. It is possible that, given more time, an alternative view of the altmetrics data could be created, however this was considered mostly out of scope.
+The use of the Node.js platform and the Express framework was a good choice for creating a cohesive application that combines the four other elements of the system. The application is able to handle HTTP requests, process their data and send correct responses. The Express framework allows a clean and understandable architecture for the application, without taking an opinionated approach.
 
+The web site was constructed with a progressive enhancement approach, where pages are constructed in a layered fashion. The main benefit of this approach is that more users can more easily access the application. There are two broad categories of users in this respect; those with older browsers, and those using accessibility tools. For the former group the progressive enhancement approach means that they can still use the web page despite their outdated browser. For the latter group, separating and optimising the content layer (represented using HTML) from the presentation and behaviour layers (represented using CSS and Javascript respectively), means that accessibility tools can gain a greater semantic understanding of the web page's functionality.
 
-* Web application
-	* Async
-		* Difficult
-		* "Pyramid of doom"
-	* Accessibility
-	* Search page
-		* localStorage can be confusing
-			* Especially when going back and searching for different articles once some articles are selected
-				* On second search, it would appear that previously searched articles would be returned by the search results, when they're not they are just appended because they are stored
-			* Usability test
-			* Users not familiar with localStorage concepts - usually have to submit something for storage to take place
-			* Should have split stored articles into a separate area - less confusing
-		* Could be improved by having visualisation build on side of page, when articles are selected
-			* Then change submit button to save button, to save data to db
-			* Improves on confusing UI
-		* Search results page
-			* Search results not paginated
-				* What happens if you put in something really generic & get lots of results
-	* Styles
-		* Bootstrap
-	* Overall a reasonable implementation
-* More time required
-	* Not fully baked
+The server implementation therefore had to handle requests from "regular" HTTP requests and asynchronous requests (via XMLHttpRequest). These were given separate routes as they could potentially return data in different formats. Requests to the `/api` routes always return data in JSON format. This means that the application can very effectively take a progressive enhancement approach. requires Javascript and SVG support. Unfortunately, D3.js depends on being able to use these relatively new features of the web, and so a true progressive enhancement approach could not be taken. It is possible that, given more time, an alternative view of the altmetrics data could be created, however this was considered out of scope.
+
+The event based nature of Node.js leads to applications that use callback structures heavily. The asynchronous capabilities of many core Node.js methods mean that callback functions are required for applications to work. For complex system there is often a need for a series of nested callbacks that some have jokingly termed the "pyramid of doom". An example is shown in the code snippet below.
+
+```js
+func1(function(value1) {
+	func2(function(value2) {
+		func3(function(value3) {
+			func4(function(value4) {
+				// ...
+			});
+		});
+	});
+});
+```
+
+This is considered bad practice, due to the reduced readability, especially issues with scope. This must be refactored make the internal structure clearer. This is sometimes difficult to achieve, especially as other programming paradigms lack this structure, and execute procedurally. The author found that unfamiliarity with this style hard to adapt to. The application achieves this refactoring to some extent, especially in the search and data collection API wrappers (see section 4.2.2). The "pyramid of doom" is avoided mostly, however it is replaced code that is only marginally more readable. The following code snippet shows a controller function that is executed when the home page is requested.
+
+```js
+index: function(req, res, next) {
+	this.run(req, res, next);
+}
+```
+
+This code shows some of the confusing function calls that are found in the controller logic. The controller that contains this method uses a form of inheritance to include the `run()` method for all controllers (see section 4.6.4). The `run()` method will find the relevant view class, and render it using data from the current controller. However, as is evident, the request and response objects must be passed in to the function. This breaks Express' concept of "middleware", where responses are processed by a series of asynchronous functions that call the `next()` callback once finished. Under this paradigm, the controller should perform it's task and generate necessary request data before calling the `next()` callback. If additional processing is required, this would be handled next, otherwise, control would move to the view class to create the response. This is much cleaner than the current architecture used by the application, and doesn't require confusing function calls such as the one shown above. Each section of the processing is separated and encapsulated within itself. Given time constraints, a refactor that was to convert controllers over to this style was abandoned.
+
+As discussed in section 5.2.2, the usability test found that the article search results page is confusing for users. Selecting an article by clicking the checkbox would store this article in the browser's `localStorage`. However, other than a small UI element that shows the number of stored articles, there is little feedback for the user to know that the article has been stored. In addition, localStorage is a relatively new technology included in browsers. Therefore many users are likely unaware of such functionality, and expect a "Save" or "Submit" button to be click for data to be saved.
+
+Users also found the addition of stored articles to the results list confusing. When search results are shown, and articles have been stored in localStorage, the stored articles are appended to the end of the results list. Users did not understand that these articles were appended, and were confused as to why they were returned as search results. To prevent this, stored articles should have been added to a separate, labelled list that makes it clear how they were generated.
+
+Another problem with the search results page is that the list of results is not paginated. This was discovered late in the testing process, as some users were using generic terms in their search query, producing a very large list of results. This list should have paginated, however it was not considered a priority as it is likely that users will use the application for finding articles on specific subjects. For example, a user looking for altmetrics data about her career would only search for articles authored by herself, likely a shorter list.
+
+Finally, it was suggested that the application could be improved by removing the search results step, and integrating it into the visualisation. The visualisation could be adapted to be viewed alongside the search results, and appear empty when first created. Then as articles in the search results are selected, bubbles representing the article are added to the visualisation. Thus, the visualisation would dynamically grow as articles are selected. Users wishing to revisit the visualisation for use later, could "save" the current visualisation by clicking a button and submitting data to the server. This would significantly improve the user experience of the application. However, this enhancement had to be dropped due to time constraints.
+
+The application has a good visual style, thanks to the stylesheets sourced from the Twitter Bootstrap project. This was considered a important factor when creating the application as scientific software is not known for it's beautiful applications. The addition of class attributes to the application HTML is an extremely painless method for creating a visual design. The base styles provided by Bootstrap were modified slightly for the application, however much of the application's visual design relies on basic HTML elements, that are covered by Bootstrap. 
+
+Unit test coverage of the web application is poor. There are tests that cover the basic start up of the application, the base controller and base view classes however no tests are provided for specific controllers that inherit from this base. Even within these tests, not all functionality is tested. As discussed in section 5.2.1, it may be that fewer tests are required as much of the functionality is provided by the well-tested Express framework, however more unit tests would help develop the application further and refactor existing mechanisms.
+
+Overall, the web application is the weakest part of the codebase that makes up this application. As discussed in this section, the search results page as a number of usability problems and test coverage is low. The controllers used by the application do not exploit the middleware functionality provided by the Express framework. These failings are evident in the test results. However, Node.js and Express were used to create an application that meets requirements. It was able to combine the four other elements of the application into a cohesive system. The relative inexperience of the author in these tools likely contributed to the problems with the web application. Further development of this area is required to improve these weaknesses, such as changing the search results page to dynamically create the visualisation as articles are selected.
+
+###### 5.3.2.6 Time Constraints
+
+As discussed in this section, some parts of the application do not fully meet the requirements. This is due to the experimental nature of the project. As evidenced by requirements 8, 9 and 10 (see section 3.3), which describe the need for assessment of the suitability of Node.js, D3.js and existing altmetrics providers respectively, the project investigated relatively new technologies. This lead to a longer than expected implementation phase, as working out the best solutions for the issues raised was time consuming. Finding a clean and readable architecture for the system was a priority, as it was intended on an open source release. To achieve this several test iterations were tried before the final structure was chosen. Additional time to complete the details of the application was therefore short. Thus, given more time, the lessons of this experimentation could be applied to creating a much improved implementation.
 
