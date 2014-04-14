@@ -33,7 +33,7 @@ As described in the previous section, users are presented with a list of article
 
 This mechanism is provided by the relatively new Javascript API, localStorage. localStorage, part of the Web Storage specification ("Web Storage", n.d.), enables developers to store key/value pairs in the browser itself. The named key must be a string, and the value can be of any type, however it must be converted to a string - usually by converting to JSON - before storage. This can then be parsed to retrieve the value when needed. Storage is segmented so that only data stored on a given domain can be retrieved by the same domain. This prevents pollution by other web sites.
 
-Despite it's simplicity this storage mechanism is useful for this application. When an article is selected by a user, it's key metadata is added to an array of selected articles. This is then converted to a JSON-format string and stored in localStorage, associated with the `articles` key. When the results page is loaded, the articles data is extracted from localStorage, parsed to convert back into an array and iterated through, creating new list elements for each article. This allows the user to select articles, move back to the search form and enter a new search, and retain their previous selections. Clicking the checkbox for a selected article will remove the article from the array, and update localStorage with this new data.
+Despite it's simplicity this storage mechanism is useful for this application. When an article is selected by a user, it's key metadata is added to an array of selected articles. This is then converted to a JSON-format string and stored in localStorage, associated with the `articles` key. An "Articles" UI element is updated to reflect the number of stored articles. When the results page is loaded, the articles data is extracted from localStorage, parsed to convert back into an array and iterated through, creating new list elements for each article. This allows the user to select articles, move back to the search form and enter a new search, and retain their previous selections. Clicking the checkbox for a selected article will remove the article from the array, and update localStorage with this new data.
 
 Functionality for localStorage is encapsulated in a class, providing a clean uniform interface for storing data in the browser. The following code snippet shows the Storage class' `get()` function, used for retrieving data with a known key, along with the `parseJson()` call that it uses. 
 
@@ -84,6 +84,20 @@ Another advantage of Bower is that it removes unnecessary libraries from project
 There is, however, a major drawback with Bower. Downloaded packages can only be inserted into a single directory. By default this is set to the `bower_components` directory, although this can be changed in the `.bowerrc` configuration file. This prevents developers from having full control over how their project is structured. For example, if Bootstrap and jQuery are required, both a placed in the `bower_components` directory. They cannot be placed in separate directories - a sensible structure that is used by many is `public/css` for stylesheets (such as Bootstrap) and `public/js` for Javascript libraries (such as jQuery). 
 
 These files could be moved manually, however the purpose of Bower is to automate such tasks. Instead, a Grunt plugin, called grunt-bower-task, is used that will run Bower commands then move libraries to their desired directories. This plugin can be configured to layout libraries by type (Javascript or CSS), copying downloaded libraries from the `bower_components` directory to the relevant directory in `public`. For this application, this plugin will be run when the `grunt build` command is executed. It is frustrating that Bower does not provide this functionality, and an external plugin must be used to perform tasks that seem somewhat basic.
+
+##### 4.6.4 Controller Inheritance
+
+To better structure controllers within the application, a form of inheritance was used. Controllers join the various parts of the application by controlling the flow of data from the HTTP request to the relevant modules, before preparing the relevant response. A base controller class was created that all other controller classes inherit from. This class holds abstracted common functionality for each controller class.
+
+The inheritance is created using a method in the `Base` controller class, called `extend()`. This uses the Underscore.js library's `extend()` function which will copy properties from a source object to a destination object. Overriding properties are resolved by preferentially using the source object's property.
+
+```js
+extend: function(child) {
+	return _.extend({}, this, child);
+},
+```
+
+This allows all child controller classes to use properties and methods defined in the parent class. An example is the `run()` method which will find the relevant view class and instantiate using data passed from the controller. The view is then rendered and send in the response back to the user.
 
 * Handlebars
 
