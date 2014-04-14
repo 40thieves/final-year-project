@@ -1,5 +1,5 @@
 #### 5.4 Testing and Evaluation Summary
 
-This chapter introduced ... . In Section x, a series of tests were described which demonstrated ...
+This chapter introduced the methods used for testing the application and evaluated the system using the test results. Section 5.2 summarises the tests performed on the application, and discusses the results of these tests.
 
-An evaluation of ... was then presented in Section y. Section z revisited the requirements described in Chapter 3 and identified that ... . Finally in Section a, the aspects of ... were discussed.
+An evaluation of the application was then presented in section 5.3. Section 5.3.1 revisited the requirements described in chapter 3, finding that most of the requirements were met by the application. Finally, section 5.3.2, the artefact's implementation was evaluated, discussing the successes and failures of the final system.
