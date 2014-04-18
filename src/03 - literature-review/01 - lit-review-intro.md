@@ -1,3 +1,6 @@
 ### Chapter 2 A Review of Altmetrics
 
-This chapter discusses the state-of-the-art of ... considered during the analysis and design phase of this project. The investigation served x purposes: firstly, we wished to identify ... (see section 2.1); and secondly we wished to establish ... (see section 2.2). Finally, section 2.3 summarises the chapter.
+This chapter gives a more in depth introduction to altmetrics, discussing the origins, definitions, supporting evidence and criticism. Section 2.1 gives a brief description of the wider field of bibliometrics, and the impact factor, before discussing the problems with this approach.
+
+Section 2.2 defines altmetrics and breaks down the online data sources that are commonly used when collecting altmetrics data. Section 2.3 gives the evidence that establishes altmetrics as a useful technique, and section 2.4 gives criticism. Finally, section 2.5 draws conclusions of the review and discusses potential future work.
+
