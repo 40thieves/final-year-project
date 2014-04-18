@@ -40,3 +40,4 @@ To approach this subject, tools are required to help kick-start research. As dis
 	* Also Eysenbach (2011)
 		* Again limited to short time after publication & only Twitter
 	* Yan & Gerstein (2011) show "long tail" distribution of article views/downloads
+* Example of time-based altmetrics analysis: Interest from scholars leads to interest in scholarly blogging, and then to the wider public
