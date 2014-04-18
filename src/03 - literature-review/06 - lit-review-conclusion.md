@@ -34,3 +34,9 @@ In most studies, there have been two periods of time covered by the research; be
 
 To approach this subject, tools are required to help kick-start research. As discussed, altmetrics can generate large amounts of data that can be difficult to analyse, and therefore visualisation tools are needed to assist researchers. This also true if altmetrics are to be used for qualitative assessment, not just for quantitative assessment, as visual aides help to understand the "story" of impact.
 
+* Exception to "little or no study of altmetrics over time"
+	* Shuai, Pepe & Bollen (2012) studied the usage of Twitter by scholars over time after a new paper has been released
+		* Limited to only a few days after publication and only to Twitter as a data source
+	* Also Eysenbach (2011)
+		* Again limited to short time after publication & only Twitter
+	* Yan & Gerstein (2011) show "long tail" distribution of article views/downloads
