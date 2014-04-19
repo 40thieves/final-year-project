@@ -8,7 +8,7 @@ The field of bibliometrics, sometimes scientometrics, has existed for many years
 
 The Journal Citation Reports is published annually by Thomson Reuters, listing all known journals and giving their impact factor, and other metrics for the current year. Neylon and Wu (2009) state that "most scientists ... will point to the Thomson ISI Journal Impact Factor as an external and 'objective' measure for ranking the impact of specific journals and the individual articles within them".
 
-Usage of the impact factor in ranking research other than journals has become more widespread. Increasingly, impact factor has become a proxy for measuring many diverse research outputs. These range from comparisons of international impact to individual article value (Fuyuno & Cyranoski, 2006) (Arnold & Fowler, 2010) (Garfield, 2006). Article value is calculated by proxy, by simply taking the impact factor from the journal it was published in. This has lead to ranking author impact, by totalling the impact factor of each paper published.
+Usage of the impact factor in ranking research other than journals has become more widespread. Increasingly, impact factor has become a proxy for measuring many diverse research outputs. These range from comparisons of international impact to individual article value (Fuyuno & Cyranoski, 2006) (Arnold & Fowler, 2010) (Garfield, 2006). Article value is calculated by proxy, by simply taking the impact factor from the journal it was published in. This has led to ranking author impact, by totalling the impact factor of each paper published.
 
 Because of its wide-ranging use, the impact factor has a strong influence on the scientific community. This has affected decisions on where to publish, whom to promote or hire, the success of grant applications, library decisions to purchase and renew journal subscriptions, researchers deciding where to publish, researchers choice on what to read and even salary bonuses (Van Epps & Hill, 2007) (Arnold & Fowler, 2010). The Public Library of Science (PLOS) Medicine editors (2006) report that "in some countries, government funding of entire institutions is dependent on the number of publications in journals with high impact factors".
 
@@ -20,7 +20,7 @@ The impact factor has been the subject of much criticism, with many papers repor
 
 __Impact Cannot Be Represented By a Single Value__
 
-Arnold & Fowler (2010) report that "the allure of the impact factor as a single, readily available number - not requiring complex judgments or expert input, but purporting to represent journal quality - has proven irresistible to many". It is this inherent simplicity that lead to the rise of the impact factor. As is shown in this chapter, this simplicity fails to interpret the scope and complexity of scientific impact.
+Arnold & Fowler (2010) report that "the allure of the impact factor as a single, readily available number - not requiring complex judgments or expert input, but purporting to represent journal quality - has proven irresistible to many". It is this inherent simplicity that led to the rise of the impact factor. As is shown in this chapter, this simplicity fails to interpret the scope and complexity of scientific impact.
 
 __Network Effects Are Disregarded__
 
