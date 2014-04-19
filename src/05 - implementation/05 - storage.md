@@ -46,7 +46,7 @@ var ArticleSchema = mongoose.Schema({
 });
 ```
 
-This shows the structuring available in Mongoose. The article's publication date will be stored as a Javascript `Date` object, while the total number of views the article receives will be stored as a number, as opposed to a string representation of the number. The sources property holds an array of data sources associated with an article. This source schema is the final layer in the application's database structure. The following code snippet shows the source schema.
+This shows the structuring available in Mongoose. The article's publication date will be stored as a JavaScript `Date` object, while the total number of views the article receives will be stored as a number, as opposed to a string representation of the number. The sources property holds an array of data sources associated with an article. This source schema is the final layer in the application's database structure. The following code snippet shows the source schema.
 
 ```js
 var SourceSchema = mongoose.Schema({

@@ -4,7 +4,7 @@ In section 3.4.5, a solution to the requirement for collection of altmetrics dat
 
 ##### 4.2.1 Best Practices
 
-As the module has been published as a standalone package, Javascript best practices must be followed. This is to assist other developers using the package, giving them greater understanding of how the package functions. One of these best practices involves structuring the module using prototypical inheritance. Widely popularised by Douglas Crockford, this form of object orientated programming takes advantage of Javascript's prototype chain to create class-like objects containing class-scoped variables and functions. Every object has an internal link to another object (called the prototype). This prototype has it's own link to another prototype, continuing until this prototype chain reaches a reference to `null`.
+As the module has been published as a standalone package, JavaScript best practices must be followed. This is to assist other developers using the package, giving them greater understanding of how the package functions. One of these best practices involves structuring the module using prototypical inheritance. Widely popularised by Douglas Crockford, this form of object orientated programming takes advantage of JavaScript's prototype chain to create class-like objects containing class-scoped variables and functions. Every object has an internal link to another object (called the prototype). This prototype has it's own link to another prototype, continuing until this prototype chain reaches a reference to `null`.
 
 Object inheritance within this module is not required - it lacks the complexity for this. However, method and property inheritance are required. This is achieved in the same way as object inheritance, through the prototype chain. The following example shows a property and a function added to the prototype chain of a object.
 
@@ -20,7 +20,7 @@ Obj.prototype.aFunction = function() {
 
 Now if an instance of the `Obj` "class" is created - by calling `obj = new Obj();` - the function `aFunction` can be executed on the instance. The property `aProperty` can be accessed through the instance, by using the `obj.aProperty` statement. This encapsulates these components within the object, preventing them from polluting the global namespace, and other objects within the system.
 
-This can be extended to achieve a "constructor" style class. Functions within Javascript also have a prototype, meaning that the prototype chain can be extended for functions in the same way as above. The following example demonstrates the declaration of class with a contructor.
+This can be extended to achieve a "constructor" style class. Functions within JavaScript also have a prototype, meaning that the prototype chain can be extended for functions in the same way as above. The following example demonstrates the declaration of class with a contructor.
 
 ```js
 var Func = function() {
@@ -67,7 +67,7 @@ Foo.prototype.aFunc = function() {
 }
 ```
 
-However, this can become complicated when using prototyped method and non-prototyped methods. In locally declared functions the `this` keyword loses it's reference to the class - as it's technically not part of the class. Fortunately Javascript provides a way of mitigating this. The `bind` and `call` functions provide different systems for ensuring that the `this` keyword is bound to the desired reference. These are used in the wrapper package to maintain a consistent reference to the `this` keyword throughout the module.
+However, this can become complicated when using prototyped method and non-prototyped methods. In locally declared functions the `this` keyword loses it's reference to the class - as it's technically not part of the class. Fortunately JavaScript provides a way of mitigating this. The `bind` and `call` functions provide different systems for ensuring that the `this` keyword is bound to the desired reference. These are used in the wrapper package to maintain a consistent reference to the `this` keyword throughout the module.
 
 * Consistent style
 	* i.e. all code written in the same style

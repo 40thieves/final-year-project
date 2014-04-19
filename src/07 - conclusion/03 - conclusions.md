@@ -9,7 +9,7 @@ A system was then designed and implemented that could:
 * Store this data in a database for faster retrieval later
 * Use the data to generate a visualisation that shows altmetric data sources changing over time
 
-These were then combined to create a web application with a friendly, easy-to-use interface. The Node.js platform was used as a server, with modules for each of the above capabilities. Javascript best practices were followed in the implementation of this application, allowing significant parts of the project to be released as standalone packages. It is hoped that these can be used in the development of further research into altmetrics.
+These were then combined to create a web application with a friendly, easy-to-use interface. The Node.js platform was used as a server, with modules for each of the above capabilities. JavaScript best practices were followed in the implementation of this application, allowing significant parts of the project to be released as standalone packages. It is hoped that these can be used in the development of further research into altmetrics.
 
 In Chapter 1 a general hypothesis is stated that by providing tools for altmetrics researchers studying the temporal aspect of altmetrics, more research into this currently under-valued topic will be encouraged. Furthermore, by improving usability of the tool, an area that is traditionally lacking in scientific software, those not directly involved in altmetrics research will find value in the project.
 
@@ -47,9 +47,9 @@ As discussed in the evaluation of the artefact (see section 5.3.2), the visualis
 
 The advantage of the modular, open source approach is that, even if the project has moved on or development has stopped, others can take the code and update it themselves. As the code repository is hosted on GitHub, these changes can be easily patched on the original, through a pull request.
 
-__Javascript Best Practices__
+__JavaScript Best Practices__
 
-As discussed in chapter 4 (see sections 4.2.1 and 4.4.1), Javascript best practices were followed when developing the architecture of the modules described above. Due to the public nature of the modules, the packages must behave in ways that other developers expect. These best practices mean that the modules can follow what others have found to produce the best results. These lessons were also applied to the development of the web application, which combines the modules together, so that clean and efficient code is created.
+As discussed in chapter 4 (see sections 4.2.1 and 4.4.1), JavaScript best practices were followed when developing the architecture of the modules described above. Due to the public nature of the modules, the packages must behave in ways that other developers expect. These best practices mean that the modules can follow what others have found to produce the best results. These lessons were also applied to the development of the web application, which combines the modules together, so that clean and efficient code is created.
 
 Throughout the application, prototypical inheritance is used to create "class-like" structures, which contain properties and methods. This enables encapsulation of logic into the class, much like more traditional object-orientated languages. A uniform interface can be provided for interaction with the class, that increases readability and testability. This is the basis of the modular architecture used in all parts of the application.
 
