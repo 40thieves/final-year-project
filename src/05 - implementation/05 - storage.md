@@ -10,11 +10,11 @@ MongoDB is easy to install on many operating systems, with several implementatio
 
 ##### 4.5.2 Mongoose
 
-The previous section discussed the requirement's need for lack of complexity and the suitability of MongoDB for this task. However, it was discovered some structure could be implemented for the MongoDB database in a non-time-consuming manner. The Mongoose object model library for Node.js was found to provide a much cleaner interface to MongoDB and also allow the creation of data structures within the database.
+The previous section discussed the requirement's need for a lack of complexity and the suitability of MongoDB for this task. However, it was discovered some structure could be implemented for the MongoDB database in a non-time-consuming manner. The Mongoose library for Node.js was found to provide a much cleaner interface to MongoDB and also allows the creation of data structures within the database.
 
-Mongoose is an object model map, the equivalent of an object relational map (ORM) that have been used for many years in other languages such as PHP and Ruby. Mongoose allows the creation of "schemas" within the database that have specified properties, unlike vanilla MongoDB where documents can have any number of properties. These are not unlike a table within a relational database, meaning that Mongoose can act as a "halfway house" between NoSQL and relational databases. These models provide a greater structure for the data, allowing for future work to expand on analysis of stored data.
+Mongoose is an object model map, the equivalent of an object relational map (ORM) implementations of which have been used for many years in other languages such as PHP and Ruby. Mongoose allows the creation of "schemas" within the database that have specified properties, unlike vanilla MongoDB where documents can have any number of properties. These are not unlike a table within a relational database, meaning that Mongoose can act as a "halfway house" between NoSQL and relational databases. These models provide a greater structure for the data, allowing for future work to expand on analysis of stored data.
 
-A nested structure of schemas was created for the application. At the top level is the report schema. This provides a unique key to an entire data entity that was returned from the data collection API. This unique key is what is used to generate the permalink to the resource. The following code snippet shows the report schema.
+A nested structure of schemas was created for the application. At the top level is the report schema. The entire data entity that is returned from the data collection API wrapper within an instance of the report schema. The following code snippet shows the report schema.
 
 ```js
 var ReportSchema = mongoose.Schema({
@@ -26,7 +26,7 @@ var ReportSchema = mongoose.Schema({
 });
 ```
 
-Although not shown in this snippet, Mongoose will automatically generate a `_id` property for each schema that is used as the unique key. A creation date is associated with each report, that will be automatically filled with the current time when a new instance is created (called a "model" within Mongoose). Finally, an array of articles will be associated with a report. These articles follow an article schema. This schema holds the article metadata as shown in the following code snippet.
+Although not shown in this snippet, Mongoose will automatically generate a `_id` property for each schema that is used as the unique key. This key is what is used later to generate the permalink to the resource. A creation date is associated with each report, that will be automatically filled with the current time when a new instance is created (called a "model" within Mongoose). Finally, an array of articles will be associated with a report. These articles follow an article schema. This schema holds the article metadata as shown in the following code snippet.
 
 ```js
 var ArticleSchema = mongoose.Schema({
@@ -46,7 +46,7 @@ var ArticleSchema = mongoose.Schema({
 });
 ```
 
-This shows the structuring available in Mongoose. The article's publication date will be stored as a JavaScript `Date` object, while the total number of views the article receives will be stored as a number, as opposed to a string representation of the number. The sources property holds an array of data sources associated with an article. This source schema is the final layer in the application's database structure. The following code snippet shows the source schema.
+This shows the structuring available in Mongoose. The article's publication date will be stored as a JavaScript `Date` object, while the total number of views the article receives will be stored as a number (as opposed to a string representation of the number). The sources property holds an array of data sources associated with an article. This source schema is the final layer in the application's database structure. The following code snippet shows the source schema.
 
 ```js
 var SourceSchema = mongoose.Schema({
@@ -61,4 +61,6 @@ var SourceSchema = mongoose.Schema({
 	histories: Array
 });
 ```
+
+This added structure may be useful for future work, as a more detailed analysis of data can be performed. Without this schema, more complex queries would have to be created to provide the same level of analysis.
 
