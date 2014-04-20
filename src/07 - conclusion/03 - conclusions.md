@@ -63,7 +63,9 @@ Both modules provide an effective mechanism for retrieving data, without clutter
 
 As discussed above, and in section 5.2.3, both wrappers were found to have value outside of the main application. Results from the acceptance test suggested that altmetrics researchers may use the modules for use in external applications. The search API wrapper has received 1 "star" from a known altmetrics researcher, showing it's potential value. However, one must consider that Node.js is not a very popular platform for researchers, with most preferring Python.
 
-Aside from continuing to make incremental improvements to the modules, there is little opportunity for further work on this part of the application. The modules meet their requirements well, and so there is no need to change them further.
+An area of improvement that could be tackled in future versions of the package would be validation of input in the data collection module. The module accepts a list of Digital Object Identifiers (DOIs) that represent articles for which data is to be found, which is currently not validated to check if the list contains invalid DOIs. If this was implemented, an error would be thrown, to be handled by the developer.
+
+Aside from this and other incremental improvements to the modules, there is little opportunity for further work on this part of the application. The modules meet their requirements well, and so there is no need to change them further.
 
 __Visualisation__
 

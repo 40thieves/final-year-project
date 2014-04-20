@@ -1,4 +1,4 @@
-#### 2.6 Chapter Summary
+#### 2.7 Chapter Summary
 
 The previous chapter introduced the concepts of altmetrics, which is the basis for the goals of this project. The project will provide tools for altmetrics practitioners studying how altmetrics change over time.
 

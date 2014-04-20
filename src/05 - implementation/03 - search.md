@@ -41,11 +41,11 @@ catch (err) {
 
 ##### 4.3.4 API HTTP Errors
 
-According to the principles of Representational State Transfer (REST), APIs should return relevant HTTP error codes when an error occurs during processing of the request. Following RESTful principles in this way is considered a best practice when developing an API. This is because developers can expect a standardised interface when communicating with an HTTP API.
+According to the HTTP protocol, APIs should return relevant HTTP error codes when an error occurs during processing of the request. Following these rules is considered a best practice when developing an API. This is because developers can expect a standardised interface when communicating with an HTTP API.
 
-Unfortunately, the PLOS Search API cannot be considered RESTful. The API does not return error codes for some errors. For example, if a search returns no results, the API returns a 200 OK response that contains no articles in the response body. According to REST, this response should be a 404 Not Found error response. In addition, if a request is malformed, for example invalid search parameters, the same empty 200 OK response is returned. Instead, a 400 Bad Request response should be returned.
+Unfortunately, the PLOS Search API cannot be considered to correctly implement the HTTP protocol. The API does not return error codes for some errors. For example, if a search returns no results, the API returns a 200 OK response that contains no articles in the response body. According to the protocol, this response should be a 404 Not Found error response. In addition, if a request is malformed, for example invalid search parameters, the same empty 200 OK response is returned. Instead, a 400 Bad Request response should be returned.
 
-This causes problems for the module as responses must be parsed to ensure that no error has occurred. This may have an effect on performance of the module, unfortunately, there is no alternative until the API follows RESTful principles. The following code snippet shows some of the error checking mechanisms within the module.
+This causes problems for the module as responses must be parsed to ensure that no error has occurred. This may have an effect on performance of the module, unfortunately, there is no alternative until the API correctly implements the protocol. The following code snippet shows some of the error checking mechanisms within the module.
 
 ```js
 Search.prototype.checkForErrors = function(err, res, body) {
