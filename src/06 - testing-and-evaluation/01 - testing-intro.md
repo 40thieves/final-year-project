@@ -2,6 +2,6 @@
 
 #### 5.1 Introduction
 
-Chapters 3 and 4 describe the design and implementation of an application to assist researchers investigate how altmetrics change over time. In this chapter, the methods used for testing the application are presented in section 5.2. The results of these tests show that the application has mixed performance for the project requirements.
+Chapters 3 and 4 describe the design and implementation of an application to assist researchers investigating how altmetrics change over time. In this chapter, the methods used for testing the application are presented in section 5.2. The results of these tests show that the application has mixed performance.
 
 Section 5.3 will evaluate the application using the test results. This evaluation will discuss how well the application performs against the requirements.

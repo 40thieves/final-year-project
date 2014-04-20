@@ -1,4 +1,6 @@
-### Chapter 2 A Review of Altmetrics
+### Chapter 2 A Review of Altmetrics Literature
+
+#### 2.1 Introduction
 
 This chapter gives a more in depth introduction to altmetrics, discussing the origins, definitions, supporting evidence and criticism. Section 2.1 gives a brief description of the wider field of bibliometrics, and the impact factor, before discussing the problems with this approach.
 

@@ -1,6 +1,6 @@
-#### 2.1 History of Bibliometrics
+#### 2.2 History of Bibliometrics
 
-##### 2.1.1 Introduction to Bibliometrics
+##### 2.2.1 Introduction to Bibliometrics
 
 The field of bibliometrics, sometimes scientometrics, has existed for many years and has created a set of methods to quantitatively analyse scientific and technological literature (De Bellis, 2009). These metrics are most commonly used to measure the impact, or value, of the research in question. Fenner (2013) defines impact as follows: "The scientific impact of a particular piece of research is reflected in how this work is taken up by the scientific community", although others look outside the academic community for impact. This impact ranking has a diverse set of applications, including assessment of an author's work. Godin & Dore (2004) find that there is "huge demand for quantitative studies and indicators on the impact of science", with most aimed at the economic impact of research. They state that research has, and continues to be, funded on the basis that it has outcomes in society. One of the most widely used methods is the Impact Factor, sometimes known as the Journal Impact Factor. It was first proposed by Eugene Garfield in 1972, in his paper, Citation Analysis As A Tool in Journal Evaluation. The impact factor is calculated using the following algorithm:
 
@@ -14,7 +14,7 @@ Because of its wide-ranging use, the impact factor has a strong influence on the
 
 In the UK, governmental assessment of Higher Education institutions have been conducted by the Research Assessment Exercise (RAE) since 1986. The exercise relied on the "subjective assessment of scientific publications by a panel of experts". Because of this, the RAE was time-consuming and expensive, costing the UK Government £12 million and universities an additional £47 million (Eyre-Walker & Stoletzki, 2013). In 2014, the RAE will be replaced by the Research Excellence Framework (REF). The REF will controversially provide more focus on research impact, with 25% of the final grading going towards measurement of value (Shepherd, 2009). Allen, Jones and Dolby (2009) believe that it is the impact factor's place as the key indicator of research progression that provides much of the rationale for the move to a more metrics-based successor.
 
-##### 2.1.2 Failings of Traditional Metrics
+##### 2.2.2 Failings of Traditional Metrics
 
 The impact factor has been the subject of much criticism, with many papers reporting on its faults. Increasingly, scientists have been calling for an end to the wide-ranging use of the impact factor. In December 2012, researchers at the annual meeting of the American Society for Cell Biology signed the Declaration on Research Assessment, calling for the end of the use of journal metrics to assess individual articles or authors.
 
