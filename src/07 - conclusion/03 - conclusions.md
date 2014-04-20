@@ -127,3 +127,8 @@ As discussed in section 5.3.2, the project was under significant time constraint
 
 It is expected that future work can build on this experimentation, and significantly improve the work. Improvements listed throughout this section can be applied, which are essentially ready for implementation, as they do not require assessment for suitability first.
 
+* Grunt/bower
+	* Bower's lack of tools to move files around is stupid
+	* Grunt is useful for creating admin tools
+		* Can setup and run entire project with 2 commands
+
