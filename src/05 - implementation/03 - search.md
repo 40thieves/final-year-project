@@ -1,6 +1,6 @@
 #### 4.3 Search Implementation
 
-This section will describe the implementation of the search module, as described in section 3.4.6. A wrapper around the PLOS Search API was created, producing an uniform interface to the API. By encapsulating the API logic in a module, the codebase will become cleaner and less verbose.
+This section will describe the implementation of the search module, as described in section 3.4.6. A wrapper around the PLOS Search API was created, producing a uniform interface to the API. By encapsulating the API logic in a module, the codebase will become cleaner and less verbose.
 
 ##### 4.3.1 Package Publication
 
@@ -10,7 +10,7 @@ To create a valid package, a `package.json` file must be created. This holds bas
 
 ##### 4.3.2 Similarity to Altmetrics Module
 
-The altmetrics module discussed in section 4.2 is somewhat similar to the search module described in this section. Both use prototypical inheritance (see section 4.2.1) and an event based structure (see section 4.2.2). This approach makes sense as there is some shared functionality between the modules. Both accept some parameters, use these to construct a request to their respective APIs, send a HTTP request using the request module (see section 4.2.4) before parsing and validating the response and returning the data. Therefore, using a similar structure means that, overall, the codebase is cleaner and more readable.
+The altmetrics module discussed in section 4.2 is somewhat similar to the search module described in this section. Both use prototypical inheritance (see section 4.2.1) and an event based structure (see section 4.2.2). This approach makes sense as there is some shared functionality between the modules. Both accept some parameters, use these to construct a request to their respective APIs, send a HTTP request using the request module (see section 4.2.4) before parsing and validating the response and returning the data. Therefore using a similar structure means that, overall, the codebase is cleaner and more readable.
 
 ##### 4.3.3 Validation of Search Parameters
 
@@ -41,11 +41,11 @@ catch (err) {
 
 ##### 4.3.4 API HTTP Errors
 
-According to the principles of Resourceful State Transfer (REST), APIs should return relevant HTTP error codes, when an error occurs during processing of the request. Following RESTful principles in this way is considered a best practice when developing an API. This is because developers can expect a standardised interface when communicating with an HTTP API.
+According to the principles of Representational State Transfer (REST), APIs should return relevant HTTP error codes when an error occurs during processing of the request. Following RESTful principles in this way is considered a best practice when developing an API. This is because developers can expect a standardised interface when communicating with an HTTP API.
 
-Unfortunately, the PLOS Search API cannot be considered RESTful. The API does not return error codes for some errors. For example, if a search returns no results, the API returns a 200 OK response that contains no articles in the response body. According to REST, this response should be an 404 Not Found error response. In addition, if a request is malformed, for example invalid search parameters, the same empty 200 OK response is returned. Instead, a 400 Bad Request response should be returned.
+Unfortunately, the PLOS Search API cannot be considered RESTful. The API does not return error codes for some errors. For example, if a search returns no results, the API returns a 200 OK response that contains no articles in the response body. According to REST, this response should be a 404 Not Found error response. In addition, if a request is malformed, for example invalid search parameters, the same empty 200 OK response is returned. Instead, a 400 Bad Request response should be returned.
 
-This causes problems for the module as responses must be parsed to ensure that no error has occurred. This may have an affect on performance of the module, unfortunately, there is no alternative until the API follows RESTful principles. The following code snippet shows some of the error checking mechanisms within the module.
+This causes problems for the module as responses must be parsed to ensure that no error has occurred. This may have an effect on performance of the module, unfortunately, there is no alternative until the API follows RESTful principles. The following code snippet shows some of the error checking mechanisms within the module.
 
 ```js
 Search.prototype.checkForErrors = function(err, res, body) {
