@@ -70,7 +70,7 @@ Similar to requirement 8, D3.js will be used to provide the visualisation requir
 
 __Requirement 10. Assessment of existing altmetrics providers__
 
-As discussed in requirement 4, altmetrics data will be sourced from an altmetrics provider. The PLOS Article Level Metrics (ALM) API, the ImpactStory API and the Altmetric.com API all provide access to this data, with varying levels of compatibility for this project. They will be compared to see which is the most suitable for this implementation.
+As discussed in requirement 4, altmetrics data will be sourced from an altmetrics provider. The PLOS Article Level Metrics (ALM) API and the Altmetric.com API all provide access to this data, with varying levels of compatibility for this project. They will be compared to see which is the most suitable for this implementation.
 
 The selected provider must include historical data - metadata on when altmetric citations occurred. For example, the API would provide a breakdown of each data source, showing the increase in altmetric citations for each year. This breakdown must be no longer than a year, otherwise any analysis would be too general to be useful. The system requires this to be able to show the difference in altmetrics data between time periods, as discussed in requirement 2.
 

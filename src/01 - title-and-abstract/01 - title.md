@@ -13,4 +13,4 @@ The copyright of this thesis rests with the Author. Copies (by any means) either
 
 ### Acknowledgements
 
-The author would like to thank Rich Boakes, Cameron Neylon and Dan Harper for their advice and comments at various stages of this work.
+The author would like to thank Rich Boakes, Cameron Neylon, Jenny Smith and Dan Harper for their advice and comments at various stages of this work.
