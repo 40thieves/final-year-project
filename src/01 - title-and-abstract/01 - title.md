@@ -1,4 +1,4 @@
-# Title
+# Investigation of Altmetrics and How They Change Over Time
 
 ## by Alasdair Smith
 
@@ -11,6 +11,6 @@ April 2014
 Copyright &copy; Alasdair Smith. All rights reserved.
 The copyright of this thesis rests with the Author. Copies (by any means) either in full, or of extracts, may not be made without prior written consent from the Author.
 
-### Preface
+### Acknowledgements
 
-If you have people to thank, do so on this page, otherwise, delete it.
+The author would like to thank Rich Boakes, Cameron Neylon and Dan Harper for their advice and comments at various stages of this work.
