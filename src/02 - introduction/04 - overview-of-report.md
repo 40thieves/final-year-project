@@ -6,7 +6,7 @@ Chapter 2 reviews the published literature on altmetrics, giving details on the 
 
 In Chapter 3 the design of the artefact is discussed. The methodology that is used throughout the project is described, followed by the list of requirements needed to achieve the goals stated in section 1.2. Finally, a proposed solution to the problem described by the requirements is detailed in section 3.4.
 
-Chapter 4 describes the implementation of the application. Key aspects of the 5 major parts that make up the application are discussed in more detail. Problems that were encountered during this phase of the project are described and the solutions and work-arounds to these issues are discussed.
+Chapter 4 describes the implementation of the application. Key aspects of the five major parts that make up the application are discussed in more detail. Problems that were encountered during this phase of the project are described and the solutions and work-arounds to these issues are discussed.
 
 Chapter 5 discusses the tests that were performed on the final application and gives an overview of their results. These results are then used in section 5.3 to evaluate the artefact. As part of this the requirements given in section 3.3 are assessed and the artefact evaluated against them. Finally for this chapter, the implementation details described in chapter 4 are evaluated.
 
