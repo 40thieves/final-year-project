@@ -6,16 +6,7 @@ This section will discuss the implementation of the web application that was pro
 
 Figure 4.3 shows a data flow diagram of the application. Users are presented with the home page, containing the search form. When this is submitted, the search parameters are sent to the search API wrapper. Articles returned from the API are then presented to the user in a list. Users can review this list and select articles of interest. This list of selected articles is sent to the altmetrics data collection API wrapper. Data returned from this wrapper is stored in the database. This generates a unique key for the data, which is used to create a permalink for this dataset. Users are then redirected to the permalink where the visualisation is shown.
 
-* Figure 4.3
-* Application flow diagram
-	* How data is moved around in the application
-	* The links that they click to get to permalink
-	* _Diagram showing application flow_
-	* Differences in flow for AJAX and non-AJAX users
-* Other notes
-	* Express
-		* Routes
-		* Controllers
+![Figure 4.3: Flow diagram showing the flow of data between the various parts of the application and the user](../../src/img/figure4-3.png)
 
 The web site was constructed with a progressive enhancement approach, where pages are constructed in a layered fashion. This means that basic support for all clients is provided by HTML. This is visually enhanced with CSS, and then behaviour is added using JavaScript. These enhancement steps are not required for the core functionality to work, allowing the web site to work on any browser. Each page is constructed to be semantic, giving meaning to a page without using visual design.
 

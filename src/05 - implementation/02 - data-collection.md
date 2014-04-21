@@ -73,7 +73,7 @@ However, this can become complicated when using prototyped method and non-protot
 
 Another best practice that is recognised by many Node.js developers is the file structure of the module. Typically a Node.js module is organised in the following manner:
 
-![Figure 4.1: Screenshot of the final visualisation](../../src/img/figure4-1.png)
+![Figure 4.1: Diagram showing basic file structure of a Node.js application](../../src/img/figure4-1.png)
 
 There sometimes are variations on the naming conventions shown here, however, the `lib` directory will hold files containing the application logic, and the `test` directory contains the module's unit tests. The `app.js` file will bootstrap the module, exporting the necessary files from the module library. This will make the logic contained in the library available to Node.js.
 
