@@ -1,4 +1,4 @@
-#### 5.2 Testing summary
+#### 5.2 Testing Summary
 
 In Chapters 3 and 4, an application was described that is designed to assist researchers examine how altmetrics change over time. In this section, the methods by which this application was tested are described. Three major tests were performed; section 5.2.1 describes the unit tests that were created during the design and implementation phase. Section 5.2.2 describes the usability tests that were performed after the application was completed. Finally, section 5.2.3 discusses the methods and results of further usability tests and acceptance tests from a sample of altmetrics researchers.
 
