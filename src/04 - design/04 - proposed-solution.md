@@ -82,7 +82,7 @@ Requirement 6 states that the system must be easy-to-use and have good visual de
 <button class="btn btn-primary">Primary</button>
 ```
 
-![Figure 3.3: Button created using Bootstrap](../../src/img/figure3-3.png)
+![Figure 3.1: A screenshot of a button created using Twitter Bootstrap stylesheets](../../src/img/figure3-1.png)
 
 The styles provided by Bootstrap are useful, however, they do require adjustment. This can be a little difficult when using CSS, especially considering the challenges faced in a modern web environment. For example, many browsers use CSS pre-fixes for newer or experimental features. Adding these manually is time-consuming, and so CSS pre-processors have started to fill the gaps left by CSS.
 
@@ -104,7 +104,7 @@ Requirement 4 describes the need for altmetrics data collection from an external
 | Transparency | Full source of the application used to generate the API is available under an Apache 2.0 License | Exact methods of data collection and calculation are proprietary |
 | Other comments | Not all data sources, such as Scopus citations, include historical metadata. This is a known issue that is registered on the API application issue tracker, where it is discussed this will be fixed for version 3 of the API | No data source captures article views or downloads |
 
-Table 3.1: A comparison of potential altmetrics data providers
+Table 1: A comparison of potential altmetrics data providers
 
 The ImpactStory API was initially considered, however it was discovered that this API has been deprecated and discontinued. However, an ImpactStory blog post discusses the possibility that it may be offered again "in the near future" ("New widget and API | Impactstory blog", 2012).
 
@@ -180,6 +180,8 @@ The application will serve the search form as a static web page, containing a fo
 | Publication date | Matches article's publication date                           |
 | DOI              | Matches an article's Digital Object Identifier               |
 
+Table 2: Input fields used for the scholarly article search form
+
 Once the form is submitted, a request will be made to the application server with the attached search parameters. The parameters are received by the server and passed to the search API wrapper.
 
 The search API wrapper will perform a search for articles that match these search parameters. Unfortunately, there are very few reliable sources for searchable published scholarly material. Initially, the CrossRef API was considered as it provides search for a large number of publishers. However, and as discussed in section 3.4.5, only articles published by PLOS can be processed by the PLOS ALM API wrapper, and therefore the search part of the system cannot return articles published by other journals. This restriction means that the sensible choice is the PLOS Search API, as this will only search for PLOS articles.
@@ -223,7 +225,7 @@ Requirements 1 and 2 state the need for a visualisation of altmetrics data and h
 
 The x- and y-axes of the chart represent the article's altmetric values for two different data sources. The user can select which data source is to be represented on these axes. Articles are represented by a "bubble" on the chart that is centred according to the values of the selected data sources. The size of the bubble represents the total number of traditional scholarly citations the article has received. An example is shown below:
 
-![Figure 3.1: Example bubble chart](../../src/img/figure3-1.png)
+![Figure 3.2: An example of a bubble chart](../../src/img/figure3-2.png)
 
 This will meet some of the requirements described in requirement 1, as it allows the user to compare multiple articles against each other. Users can see if a large number of views (as in this example) leads to a large number of citations, and thus greater impact. The visualisation also meets the requirement to be able to switch between multiple altmetric data sources.
 
@@ -235,7 +237,7 @@ A graph that allows comparison of data sources, while also showing changes over 
 
 It is this comparison over changes over time that is missing from other visualisation styles. The concept will be adopted for the project, by animating the bubbles to move as the time changes. In addition to this animation, the user will also be able to control the passage of time manually using the mouse.
 
-![Figure 3.2: Animated bubble chart](../../src/img/figure3-2.png)
+![Figure 3.3: A series of images showing the progression of an animated bubble chart](../../src/img/figure3-3.png)
 
 Much like the wrappers described in sections 3.4.5 and 3.4.6, the visualisation code will be encapsulated into a module. Prototypical inheritance will be used to structure the library, giving an object-orientated style "class". The library will accept basic options in its constructor, which will then build the chart and append it into the DOM.
 

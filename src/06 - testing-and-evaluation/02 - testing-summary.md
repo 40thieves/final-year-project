@@ -43,6 +43,8 @@ Coverage, a term often used in relation to testing, refers to the amount of prod
 | Altmetrics data collection | 93.85%     | 84.85%   | 100%      | 93.85% |
 | Search                     | 96.97%     | 90.48%   | 100%      | 96.97% |
 
+Table 3: Testing coverage report, for the data collection and search modules
+
 Coverage of the web application part of the code base is poor. Time restrictions meant that few tests were written while developing this part of the application. However, this may not seriously affect the project, as much of the functionality of the web application extends the well tested Express framework, or Mongoose object-model map.
 
 One area that may be affected is the visualisation library, which was not extensively tested. This is because the library developed from experimentation with the D3.js library, rather than as a specific project designed to meet the requirements. Testing after a large amount of production code has been created takes time, and is more prone to errors. However, if the library is to be released for usage by third parties, unit tests should have been created.

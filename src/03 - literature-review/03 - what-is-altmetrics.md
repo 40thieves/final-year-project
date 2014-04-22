@@ -120,7 +120,7 @@ A concept that is revealed through classification of altmetric data sources is a
 
 It could be argued that this higher engagement shows higher impact. However, some find that simply classifying impact generates value by putting it into context ("ImpactStory: FAQ", n.d.). The "story" behind that impact can be told. Additionally, by definition, the access to the tools that show higher levels of engagement - not everyone can write a research paper in which to cite. To combat this, ImpactStory splits its categories into data sources that affect scholars and the public. They suggest "categorizing metrics along two axis: engagement type and audience" ("A new framework for altmetrics", 2012).
 
-![Categorisation of altmetric sources by ImpactStory](../../src/img/figure2-2.png)
+![Figure 2.2: Categorisation of altmetric sources by the altmetrics provider, ImpactStory](../../src/img/figure2-2.png)
 
 Similarly, Lin & Fenner (2013) distinguish between primary metrics, "the raw counts of activity captured by each source", and secondary metrics "comprised of descriptive statistics that give context to the primary metrics", giving an example of average usage of similar papers.
 

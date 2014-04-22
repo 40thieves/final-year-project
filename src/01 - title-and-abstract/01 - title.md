@@ -1,4 +1,4 @@
-# Investigation of Altmetrics and How They Change Over Time
+# On the Temporal Aspect Of Altmetrics
 
 ## by Alasdair Smith
 

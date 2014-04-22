@@ -71,7 +71,7 @@ Finally, the circles will be animated to move according to the changes in altmet
 
 As discussed above, the amount of time passed between years may be fractional. Clearly there are no data values for such fractional years. There are two approaches to this problem; either round up or round down the current year to make it an integer again; or calculate an interpolated value using the fractional year. The former approach would create a very "jerky" animation where bubbles only move at the end of a year, whereas the latter approach would smooth the movement so movement occurs throughout the year. Therefore, the interpolation approach was taken. Figure 4.1 shows a screenshot of the final visualisation.
 
-![Figure 4.2: Screenshot of the final visualisation](../../src/img/figure4-2.png)
+![Figure 4.2: A screenshot of the final visualisation](../../src/img/figure4-2.png)
 
 ##### 4.4.3 Problems with the Dataset
 
