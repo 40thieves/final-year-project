@@ -6,9 +6,13 @@ This section will discuss the implementation of the web application that was pro
 
 </div>
 
+<div class="page-break-avoid">
+
 ##### 4.6.1 Application Flow
 
 Figure 4.3 shows a data flow diagram of the application. Users are presented with the home page, containing the search form. When this is submitted, the search parameters are sent to the search API wrapper. Articles returned from the API are then presented to the user in a list. Users can review this list and select articles of interest. This list of selected articles is sent to the altmetrics data collection API wrapper. Data returned from this wrapper is stored in the database. This generates a unique key for the data, which is used to create a permalink for this dataset. Users are then redirected to the permalink where the visualisation is shown.
+
+</div>
 
 ![Figure 4.3: Flow diagram showing the flow of data between the various parts of the application and the user](../../src/img/figure4-3.png)
 
@@ -20,9 +24,13 @@ The slight differences in this behaviour mean that two alternative routes must b
 
 There is an exception to the progressive enhancement approach in this project. JavaScript is required to create the visualisation, as it is created using D3.js. Therefore, no progressive enhancement takes place in this part of the web application, and it is assumed that the user has JavaScript turned on.
 
+<div class="page-break-avoid">
+
 ##### 4.6.2 Search Results Page
 
 As described in the previous section, users are presented with a list of articles that match their search query. They can then select articles by clicking the checkboxes. This is an acceptable interface for users to designate a list of articles that they wish to view altmetrics data for. However, it became apparent that this user interaction is problematic. If, for example, a user wished to select articles from one author, then go back and select further articles from another author, their original selections were removed and forgotten by the system. Clearly, a mechanism for saving selections was required.
+
+</div>
 
 This mechanism is provided by the relatively new JavaScript API, localStorage. localStorage, part of the Web Storage specification ("Web Storage", n.d.), enables developers to store key/value pairs in the browser itself. The named key must be a string, and the value can be of any type, however it must be converted to a string - usually by converting to JSON - before storage. This can then be parsed to retrieve the value when needed. Storage is segmented so that only data stored on a given domain can be retrieved by the same domain. This prevents pollution by other web sites.
 
@@ -68,9 +76,13 @@ var Storage = {
 
 This method is designed to be called when the Storage class is used for the first time. It will test if localStorage is supported by the user's browser. By wrapping usage of the Storage class in a test for support, a progressive enhancement approach is taken - the more complex behaviour is only used if the browser supports localStorage.
 
+<div class="page-break-avoid">
+
 ##### 4.6.3 Bower
 
 As discussed in section 3.4.3, the package manager Bower will be used to download important stylesheets from the Twitter Bootstrap project. Bower is an increasingly popular tool for developers creating web sites using third-party libraries and stylesheets, such as Bootstrap and jQuery. Through the use of a command line tool, packages can be more easily downloaded and maintained. By running a `bower update` command, latest versions of the required packages will be downloaded and installed in the project.
+
+</div>
 
 Another advantage of Bower is that it removes unnecessary libraries from project repositories, making them somewhat cleaner. Required packages are listed in the `bower.json` file in the root of the project. This allows the project maintainer to remove the libraries from the repository, and require users of the project to run a Bower command that will download libraries and insert them into the project.
 
@@ -78,9 +90,13 @@ There is, however, a major drawback with Bower. Downloaded packages can only be 
 
 These files could be moved manually, however the purpose of Bower is to automate such tasks. Instead, a Grunt plugin, called grunt-bower-task, is used that will run Bower commands then move libraries to their desired directories. This plugin can be configured to layout libraries by type (JavaScript or CSS), copying downloaded libraries from the `bower_components` directory to the relevant directory in the `public` directory. For this application, this plugin will be run when the `grunt build` command is executed. It is frustrating that Bower does not provide this functionality, and an external plugin must be used to perform tasks that seem somewhat basic.
 
+<div class="page-break-avoid">
+
 ##### 4.6.4 Controller Inheritance
 
 To better structure controllers within the application, a form of inheritance was used. Controllers join the various parts of the application by controlling the flow of data from the HTTP request to the relevant modules, before preparing the relevant response. A base controller class was created that all other controller classes inherit from. This class holds abstracted common functionality for each controller class.
+
+</div>
 
 The inheritance is created using a method in the `Base` controller class, called `extend()`. This uses the Underscore.js library's `extend()` function which will copy properties from a source object to a destination object. Overriding properties are resolved by preferentially using the source object's property.
 
@@ -92,9 +108,13 @@ extend: function(child) {
 
 This allows all child controller classes to use properties and methods defined in the parent class. An example is the `run()` method which will find the relevant view class and instantiate using data passed from the controller. The view is then rendered and sent in the response back to the user.
 
+<div class="page-break-avoid">
+
 ##### 4.6.5 Handlebars Views
 
 In a Model-View-Controller (MVC) architecture views are a concept that represents the interface between the application and the user. In the vast majority of cases views take the form of an HTML page in web applications. For this application, views are created in a two-step process.
+
+</div>
 
 Firstly, data generated by the controller is sent to the relevant view generator. The view generator takes this data and uses it to populate the relevant template. As all views within the artefact are based on similar template population, a single Base view generator is used. The view generator selects the desired template, then uses the function `render()` from the Express framework to populate the template using a "view engine". This approach enables developers to use templates of any format, through simple configuration.
 

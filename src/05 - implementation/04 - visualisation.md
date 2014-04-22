@@ -6,9 +6,13 @@ This section will discuss the implementation of the visualisation of altmetrics 
 
 </div>
 
+<div class="page-break-avoid">
+
 ##### 4.4.1 Asynchronous Module Definition
 
 This library, called AlmChart, will be published under an open source licence. Because of this, the library will follow best practices for browser-focussed JavaScript libraries. These are similar to the best practices followed for the search and data collection modules, however there are some key differences.
+
+</div>
 
 Unlike Node.js, a browser-based library author cannot know what environment the library will be run under. The environment that Node.js maintains (see section 4.2.1) means that modules are separated from each other. To access another module, it must first be imported. This is not the case for browser libraries, where namespace collisions can produce errors if not carefully managed. This has led to the rise of module definitions, which attempt to provide a standardised structure for JavaScript libraries, separating them from each other, while still allowing import-like behaviour. One of the most popular of these is Asynchronous Module Definition (AMD), and this format is used for the AlmChart library. The AMD Wiki ("AMD · amdjs/amdjs-api Wiki", n.d.) defines a single function, called `define()`, that has the following signature.
 
@@ -48,9 +52,13 @@ This shows that if an AMD module loader is used then the library is declared usi
 
 The AlmChart class is instantiated using the normal JavaScript method - `new AlmChart()`. The library requires two options to be passed to the constructor. Firstly, the DOM element that the chart is to be appended to is required. The URL for the data source is also needed. Once instantiated, the chart will be drawn when the `draw()` function is called. The default data sources used will be the number of Twitter mentions and the number of views. These can be changed by executing the `setConfig()` function and passing in the new configuration options. This will change the data accessor functions within the library, thereby changing the data sources that are selected from, which will therefore will change the data shown on the chart.
 
+<div class="page-break-avoid">
+
 ##### 4.4.2 AlmChart Library
 
 The library performs several steps to set up, create and animate the chart. The chart depends on D3.js, which is used to perform most of the drawing and calculation tasks. However, to begin with, the D3.js library did not work. When including the development version of the library, the browser would throw errors, originating from a pi (π) character that was included in the source. It is suspected that some character encoding problems caused the errors. Fortunately, the compressed and minified version of the library does not include this character, and thus did not throw any errors. This is a practice that should be adopted for production-ready web sites anyway, and so was used in the final application.
+
+</div>
 
 When the AlmChart class is instantiated the class configuration is set. This includes setting up the data accessors - functions that will retrieve values from the currently selected data sources. There are three key data accessors; one for the x-axis, one for the y-axis and one for the radius of the bubble. They are called when the class requires a value for the article. The argument provided to an accessor is the given article's entire data entity, including all possible data sources. The purpose of the accessor is to find the correct data source within this entity. The following code snippet shows two of the data accessors.
 
@@ -77,9 +85,13 @@ As discussed above, the amount of time passed between years may be fractional. C
 
 ![Figure 4.2: A screenshot of the final visualisation](../../src/img/figure4-2.png)
 
+<div class="page-break-avoid">
+
 ##### 4.4.3 Problems with the Dataset
 
 Unfortunately, it was found that the dataset provided by the PLOS ALM API, and thus the altmetric API wrapper, has some significant issues. The main problem is that data for most data sources is sparse - much of the data is not useful. Several of the data sources do not include historical metadata, and so simply return a `null` value. For example, the number of scholarly citations an article receives is not broken down historically. This is one reason why the radius of the bubble does not change with time. The problem would cause bugs in the calculation of article bubble positions, as performing mathematics on a `null` value will create a `NaN` ("not a number"). This problem is addressed in an issue registered on the PLOS ALM API issue tracker, acknowledging the problem and stating that work towards fixing the problem will be included in version 3.0 of the API ("provide daily/monthly/yearly stats for all sources · Issue #9 · articlemetrics/alm", n.d.).
+
+</div>
 
 Of the data that is useful, the historical data is also in a format that is not conducive for the chart calculations. For each year that is given, the associated value is the number of altmetric citations received within that year. A more useful value would be the cumulative number of citations received up to that point.
 
@@ -87,9 +99,13 @@ Another problem, of lesser significance, is that the data is structured so that 
 
 To counter these problems, filtering of the data is required. This is achieved by the `filterJson()` function. The library maps over each article in the data and converts the array to an associative object, using the data source's name as a key. This solves the third problem, allowing data sources to be selected by name, not index number. The first problem is countered by iterating through each data source and filtering out data sources with `null` historical data values. Finally, if a historical data value is found, a running total is created that converts the values to a cumulative number, solving the second problem.
 
+<div class="page-break-avoid">
+
 ##### 4.4.4 Interpolation
 
 As discussed in section 4.4.2, the library uses an interpolation algorithm to calculate data values for "fractional years" that occur when moving through the time-based dimension on the graph. The algorithm uses linear interpolation to calculate these data values, as seen in the `interpolateValues()` function. No better model could be found for calculating this interpolation.
+
+</div>
 
 The algorithm is passed all possible values for the current article and data source, and the fractional year as arguments. Data values are held in a multidimensional array, as shown in the following example.
 

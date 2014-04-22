@@ -24,9 +24,13 @@ The purpose of this review is to present altmetrics as an alternative to the imp
 
 Ultimately, altmetrics cannot be used as the definitive answer to the question of impact assessment. Qualitative assessment of the work must be combined with the quantitative data provided by altmetrics. Liu & Adie (2013) believe that "users must frame appropriate questions and decide what information they want the altmetrics data to provide". To succeed, altmetrics must broaden the scope of bibliometrics, provide data in a more timely manner and provide context for itself.
 
+<div class="page-break-avoid">
+
 ##### 2.6.1 Further Research
 
 Altmetrics is still a field in its infancy, with much work to done in various areas. Priem, Piwowar & Hemminger (2012) comment that much work is required around "reducing noise that obscures the impact signal", that is "crucial to understand what the events informing alternative metrics actually mean".
+
+</div>
 
 One area that is of great interest is a further exploration of altmetrics categorisation. Priem, Piwowar & Hemminger's (2012) seminal work in this area state that more research is required to isolate and identify "different types of impacts on different audiences". Galligan & Dyas-Correia (2013) also believe that work on "determining meaningful clusters of metrics for particular groups" is needed. They believe that certain categories can be more relevant to different assessors - some metrics may be more suited for librarians, or for the general public, while others are more relevant to researchers within the field.
 

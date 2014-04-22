@@ -6,9 +6,13 @@ In Chapters 3 and 4, an application was described that is designed to assist res
 
 </div>
 
+<div class="page-break-avoid">
+
 ##### 5.2.1 Unit Testing
 
 Section 3.2 describes the Test Driven Development (TDD) approach taken throughout the project. This approach focusses development on testing, creating a thorough design mentality. The approach involves designing and creating a test for each individual feature of the code before the code is implemented. The focus on testing each individual feature of the code is called unit testing. Unit testing, therefore, can be considered a form of functional testing where verification of specific actions is performed. In some extreme cases, each line of production code is tested using a unit test, although this is obviously impractical for most applications.
+
+</div>
 
 Once the test is created, the test is run, to ensure that the test will fail. If the test does not fail, then the feature already exists, or alternatively, the test is defective. The feature is then implemented, according to the parameters set by the test. The test is run again, and the feature's implementation must pass the test.
 
@@ -55,9 +59,13 @@ One area that may be affected is the visualisation library, which was not extens
 
 An analysis of the results of unit testing is difficult, as the tests were developed to assist during the implementation phase. They are not designed to evaluate the application against the requirements. By following the TDD approach, tests were written before implementation, so production code can be created to pass the tests. Production code is not considered to be complete until the tests pass. Unless tests are incomplete - see above for discussion of code coverage - no unit tests will fail - the TDD approach guarantees this.
 
+<div class="page-break-avoid">
+
 ##### 5.2.2 Usability Testing
 
 A usability test was performed to analyse how well the application meets requirement 6 - the application must be easy to use (see section 3.3) - and the larger project goal of usability. A small sample of users were given a task to perform using the application. The application was running on a locally installed server, using a development machine. They were then observed during the completion of the task. Task performance was evaluated for speed, "easiness" of the task and comprehension of steps taken to complete the task. After observation was completed, feedback was gathered. This gives a qualitative assessment of the application.
+
+</div>
 
 Volunteers were sourced from friends and family, to create a sample of ten users. This is a fairly small sample size, and the sample was not randomised, meaning that some bias may be introduced. To mitigate this risk, users were shown the application for the first time during the test, and were instructed to give objective feedback. Observers who were familiar with the system were discouraged from interfering with the users. This prevents biased results, caused by a "guided walkthrough" of the system, rather than a true usability test. None of the users in the sample are involved in altmetrics, and therefore the result produced by the visualisation could not be analysed. Instead, usability of the application was assessed.
 
@@ -71,9 +79,13 @@ The average time taken to complete the task was 2 minutes 11 seconds. The fastes
 
 However, nearly all users struggled to understand the article storage concept. Two members of the sample asked the observer for assistance in completing this part of the task. All users undertaking this task took longer to complete than those completing the simpler task. This suggests that the interface for selecting articles must be improved to reduce confusion.
 
+<div class="page-break-avoid">
+
 ##### 5.2.3 Acceptance Test
 
 In addition to the usability test described in section 5.2.2, an acceptance test was performed on a number of members of the altmetrics research community. This test involved setting up the system as a live web application and letting researchers perform their own tests. Researchers were then contacted by email to discuss the artefact and gather feedback. This approach cannot accurately be termed a "test", as the researcher's testing was unstructured and unsupervised. However, this was unavoidable, due to time and distance constraints.
+
+</div>
 
 The sample size for this test is very small, with only three researchers participating. There are several reasons for this; the first being the overall size of the altmetrics research community. Altmetrics is a relatively new field of study, and has yet to gain widespread interest from the larger population of researchers. In addition, spreading word to other altmetrics researchers is somewhat difficult, especially from a previously unknown and untrusted source. Despite these difficulties, three respected scholars were able to provide feedback.
 

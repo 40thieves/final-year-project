@@ -8,9 +8,13 @@ In section 3.4.5, a solution to the requirement for collection of altmetrics dat
 
 This wrapper was to be written for the Node.js platform, and published as a standalone package on Node.js' package manager, npm. The package is called nodealm, and can be downloaded by other developers looking to solve similar problems. This section describes the challenges faced when implementing this solution, and how the problems were addressed.
 
+<div class="page-break-avoid">
+
 ##### 4.2.1 Prototypical Inheritance and Node.js Modules
 
 As the module has been published as a standalone package, JavaScript best practices must be followed. This is to assist other developers using the package, giving them greater understanding of how the package functions. One of these best practices involves structuring the module using prototypical inheritance. Widely popularised by Douglas Crockford, this form of object orientated programming takes advantage of JavaScript's prototype chain to create class-like objects containing class-scoped variables and functions. The prototype chain is made up of internal links between objects, to create a linked chain.
+
+</div>
 
 Object inheritance within this module is not required - it lacks the complexity for this. However, method and property inheritance are required. This is achieved in the same way as object inheritance - through the prototype chain. The following example shows a property and a function added to the prototype chain of an object.
 
@@ -81,9 +85,13 @@ Another best practice that is recognised by many Node.js developers is the file 
 
 There sometimes are variations on the naming conventions shown here, however, the `lib` directory will hold files containing the application logic, and the `test` directory contains the module's unit tests. The `app.js` file will bootstrap the module, exporting the necessary files from the module library. This will make the logic contained in the library available to Node.js.
 
+<div class="page-break-avoid">
+
 ##### 4.2.2 Event Based Structure
 
 For the first iteration of the API wrapper, a procedural structure was adopted. The module would be called procedurally, using a `getAlm()` method, giving a list of DOIs and callback function as arguments. This would then bootstrap the module, call the API, process the results and call the callback when finished. This callback would be populated with the results, or if an error occurred, an error object. The follow example demonstrates this functionality.
+
+</div>
 
 ```js
 alm.getAlm('10.1371/journal.pbio.1000242', function(err, result) {
@@ -144,15 +152,23 @@ To listen to the event, the `on` method is used, as shown in the example above. 
 
 These callbacks split the duties performed by the callback for the `getAlm()` method. Instead of having to test for an error every time, the success callback will process successfully returned data, while the error callback will only be fired if an error occurs. This is much cleaner than the previous structure, and removes the need for an error check on every response.
 
+<div class="page-break-avoid">
+
 ##### 4.2.3 API Problems
 
 The PLOS ALM API is a good base for providing altmetrics data, as discussed in section 3.4.5, however it is not without problems. The main problem that was encountered was querying for many articles - over 20 -  with historical metadata in a single request. This will sometimes produce an error response, although this may be inconsistent. This may be due to the fact that a very large amount of data needs to be processed and so the request times out. Alternatively, there may be a bug with the API that causes this intermittently. The bug has been reported to the API providers.
 
+</div>
+
 Fortunately, there does appear to be a work-around - the API allows users to restrict the data sources that are included in the response. If the request includes `source=twitter`, for example, then only altmetric data pertaining to Twitter will be returned. This can be expanded to include multiple data sources, using a comma-separated list. In testing it was found that including a list for all possible data sources would not produce the error described above. This work-around has been implemented in the package as a temporary solution, but will be removed if the problem is resolved.
+
+<div class="page-break-avoid">
 
 ##### 4.2.4 Sending HTTP Requests
 
 The purpose of this module is to request data from the PLOS ALM API. To achieve this, an HTTP request must be sent to the server that runs the API. Node.js provides functionality for this using the `http` module, as shown in the following code snippet.
+
+</div>
 
 ```js
 var http = require('http');

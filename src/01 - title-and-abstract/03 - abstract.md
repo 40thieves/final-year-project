@@ -1,19 +1,19 @@
 ### List of Tables
 
-Table 1: A comparison of potential altmetrics data providers
-Table 2: Input fields used for the scholarly article search form
-Table 3: Testing coverage report, for the data collection and search modules
+Table 1: A comparison of potential altmetrics data providers.........................................................................36
+Table 2: Input fields used for the scholarly article search form.......................................................................39
+Table 3: Testing coverage report, for the data collection and search modules......................................................67
 
 ### List of Figures
 
-Figure 2.1: The algorithm used to calculate the impact factor
-Figure 2.2: Categorisation of altmetric sources by the altmetrics provider, ImpactStory
-Figure 3.1: A screenshot of a button created using Bootstrap Bootstrap stylesheets
-Figure 3.2: An example of a bubble chart
-Figure 3.3: A series of images showing the progression of an animated bubble chart
-Figure 4.1: Diagram showing basic file structure of a Node.js application
-Figure 4.2: A screenshot of the final visualisation
-Figure 4.3: Flow diagram showing the flow of data between the various parts of the application and the user
+Figure 2.1: The algorithm used to calculate the impact factor..........................................................................8
+Figure 2.2: Categorisation of altmetric sources by the altmetrics provider, ImpactStory.........................................18
+Figure 3.1: A screenshot of a button created using Bootstrap Bootstrap stylesheets..............................................36
+Figure 3.2: An example of a bubble chart...............................................................................................41
+Figure 3.3: A series of images showing the progression of an animated bubble chart............................................42
+Figure 4.1: Diagram showing basic file structure of a Node.js application.........................................................48
+Figure 4.2: A screenshot of the final visualisation......................................................................................55
+Figure 4.3: Flow diagram showing the flow of data between the various parts of the application and the user...............60
 
 <div class="page-break-avoid">
 

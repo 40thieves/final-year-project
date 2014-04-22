@@ -6,15 +6,23 @@ This section discusses the implementation of the database within the application
 
 </div>
 
+<div class="page-break-avoid">
+
 ##### 4.5.1 MongoDB
 
 As discussed in section 3.4.8, MongoDB is well suited to this application, due to its JSON-like document format. The application generates JSON data, so it is sensible to storage this in a JSON-like manner. MongoDB is also characterised by its relative lack of structure, similar to other so-called NoSQL databases. This is suited to the application, due to the sparsity of data that was discussed in section 4.4.3. A SQL database would struggle to define an adequate structure for data that can often be missing values. In addition, requirement 5 (see section 3.3) does not describe an overly-complex datastore. Data is merely associated with a unique key for retrieval later. This is very well suited to MongoDB.
 
+</div>
+
 MongoDB is easy to install on many operating systems, with several implementations for package managers, such as `apt-get` or `homebrew`. Unlike SQL databases, there are relatively few good tools for administration of MongoDB databases. The best MacOS client that was found is called Robomongo, and unfortunately suffers from some usability issues. To interoperate with Node.js, one of several packages from npm can be used. The most popular is the official driver `mongodb`, which provides fully featured API for accessing MongoDB data.
+
+<div class="page-break-avoid">
 
 ##### 4.5.2 Mongoose
 
 The previous section discussed the requirement's need for a lack of complexity and the suitability of MongoDB for this task. However, it was discovered some structure could be implemented for the MongoDB database in a non-time-consuming manner. The Mongoose library for Node.js was found to provide a much cleaner interface to MongoDB and also allows the creation of data structures within the database.
+
+</div>
 
 Mongoose is an object model map, the equivalent of an object relational map (ORM) implementations of which have been used for many years in other languages such as PHP and Ruby. Mongoose allows the creation of "schemas" within the database that have specified properties, unlike vanilla MongoDB where documents can have any number of properties. These are not unlike a table within a relational database, meaning that Mongoose can act as a "halfway house" between NoSQL and relational databases. These models provide a greater structure for the data, allowing for future work to expand on analysis of stored data.
 

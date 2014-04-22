@@ -6,19 +6,31 @@ This section will describe the implementation of the search module, as described
 
 </div>
 
+<div class="page-break-avoid">
+
 ##### 4.3.1 Package Publication
 
 The search package, like the altmetrics API package discussed in the previous section, was also published to npm, under the name plos-search. This enables other altmetrics researchers or developers to download and include in their work. The npm command line client provides an easy way for packages to be published. Valid packages can be published using the `npm publish` command.
 
+</div>
+
 To create a valid package, a `package.json` file must be created. This holds basic metadata about the package - package name, version number, author, repository - as well as the package's dependencies. External modules that are required for the package to run are listed, along with the relevant version number in the `dependencies` section of the `package.json` file. Modules that are only required for development - usually test or build tools - are listed in the `devDependencies` section. npm can automatically construct a `package.json` file using the `npm init` command.
+
+<div class="page-break-avoid">
 
 ##### 4.3.2 Similarity to Altmetrics Module
 
 The altmetrics module discussed in section 4.2 is somewhat similar to the search module described in this section. Both use prototypical inheritance (see section 4.2.1) and an event based structure (see section 4.2.2). This approach makes sense as there is some shared functionality between the modules. Both accept some parameters, use these to construct a request to their respective APIs, send a HTTP request using the request module (see section 4.2.4) before parsing and validating the response and returning the data. Therefore using a similar structure means that, overall, the codebase is cleaner and more readable.
 
+</div>
+
+<div class="page-break-avoid">
+
 ##### 4.3.3 Validation of Search Parameters
 
 In contrast to the altmetrics data collection package, where the input only consists of a list of DOIs, input for the search module is more complex. The PLOS Search API will only accept search parameters from a specified list. Using a request that has parameters outside this list will produce a response with no results. To prevent this possibility, the module will throw an error if such parameters are used. This will reduce the number of unnecessary requests, as those which are known to produce an error will never be sent. To achieve this, the package must hold a "whitelist" of permissible parameters and must check current parameters against this whitelist before sending a request.
+
+</div>
 
 Implementing the whitelist is relatively easy. The package has some built in configuration, for holding the root URL to the API, and the API key. This configuration is loaded each time a new instance of the module is created. If this configuration is extended to include an array of permissible terms, the module will gain access to the whitelist.
 
@@ -43,9 +55,13 @@ catch (err) {
 }
 ```
 
+<div class="page-break-avoid">
+
 ##### 4.3.4 API HTTP Errors
 
 According to the HTTP protocol, APIs should return relevant HTTP error codes when an error occurs during processing of the request. Following these rules is considered a best practice when developing an API. This is because developers can expect a standardised interface when communicating with an HTTP API.
+
+</div>
 
 Unfortunately, the PLOS Search API cannot be considered to correctly implement the HTTP protocol. The API does not return error codes for some errors. For example, if a search returns no results, the API returns a 200 OK response that contains no articles in the response body. According to the protocol, this response should be a 404 Not Found error response. In addition, if a request is malformed, for example invalid search parameters, the same empty 200 OK response is returned. Instead, a 400 Bad Request response should be returned.
 

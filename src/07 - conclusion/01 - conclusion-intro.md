@@ -1,4 +1,4 @@
-<div class="page-break-avoid">
+<div class="page-break-avoid page-break-before">
 
 ### Chapter 6 Conclusion
 
