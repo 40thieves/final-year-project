@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 2.6 Literature Review Conclusion
 
 Altmetrics provides a unique opportunity to broaden the scope and reach of the field of scientific impact, in a much expedited and transparent fashion. Furthermore, several studies have shown that altmetrics correlates with traditional citation counts, thereby validating their use. Taylor (2013), says "the potential for what we currently call altmetrics is nothing short of a complete map of scholarly activity and influence".
+
+</div>
 
 As scholarly usage of the web and social media increases, more communication between scholars will take place on mediums that we can measure using altmetrics. As discussed in section 2.4.2, Priem, Piwowar & Hemminger (2012) believe that these conversations represent those that have been long held in the hallways and conferences, and that altmetrics gives us the opportunity to examine impact generated here. They go on to speculate that as scholarly usage of web tools grows, coverage of data sources will improve. The growth of this online communication would also bring more open APIs and access to altmetrics data.
 

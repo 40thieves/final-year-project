@@ -1,12 +1,16 @@
+<div class="page-break-avoid">
+
 #### 4.6 Web Application Implementation
 
 This section will discuss the implementation of the web application that was proposed in sections 3.4.1 - 3.4.4. The web application will combine the individual modules described in sections 4.2 - 4.5, providing an easy to use interface for the user. Node.js will provide the infrastructure for the application, running an Express server to serve a search form and results page, and the visualisation once altmetrics data has been collected.
+
+</div>
 
 ##### 4.6.1 Application Flow
 
 Figure 4.3 shows a data flow diagram of the application. Users are presented with the home page, containing the search form. When this is submitted, the search parameters are sent to the search API wrapper. Articles returned from the API are then presented to the user in a list. Users can review this list and select articles of interest. This list of selected articles is sent to the altmetrics data collection API wrapper. Data returned from this wrapper is stored in the database. This generates a unique key for the data, which is used to create a permalink for this dataset. Users are then redirected to the permalink where the visualisation is shown.
 
-![Figure 4.3: Flow diagram showing the flow of data between the various parts of the application and the user](../../src/img/figure4-3.png)
+![Figure 4.3: Flow diagram showing the flow of data between the various parts of the application and the user](../../src/img/figure4-3a.png)
 
 The web site was constructed with a progressive enhancement approach, where pages are constructed in a layered fashion. This means that basic support for all clients is provided by HTML. This is visually enhanced with CSS, and then behaviour is added using JavaScript. These enhancement steps are not required for the core functionality to work, allowing the web site to work on any browser. Each page is constructed to be semantic, giving meaning to a page without using visual design.
 

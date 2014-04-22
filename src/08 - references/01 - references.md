@@ -1,4 +1,8 @@
+<div class="page-break-before">
+
 ### Chapter 7 References
+
+</div>
 
 _2013 PubMed Search Results_. (n.d.). Retrieved November 11, 2013, from http://www.ncbi.nlm.nih.gov/pubmed?Db=pubmed&term=2013:2013
 _A new framework for altmetrics. (2012)_. Retrieved October 24, 2013, from http://blog.impactstory.org/2012/09/14/31524247207/

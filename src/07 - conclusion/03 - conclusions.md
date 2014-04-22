@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 6.3 Conclusions
 
 The aim of this project was to provide tools to altmetrics researchers to assist study of how altmetrics change over time. These tools must be usable and comprehensible to those outside of altmetrics research and computing. The final goal of the project was to experiment with new technologies and assess their usefulness in this context (see section 1.2).
+
+</div>
 
 The project focussed on providing visualisation tools that allow for altmetric data source comparison over a period of time. A visualisation tool was chosen as it provides a simple mechanism for understanding the voluminous and complex data that characterises altmetrics.
 

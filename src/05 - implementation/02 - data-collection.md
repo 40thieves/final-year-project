@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 4.2 Altmetrics Data Collection Implementation
 
 In section 3.4.5, a solution to the requirement for collection of altmetrics data was proposed. This describes a wrapper around the PLOS ALM API, allowing for cleaner and less verbose usage of the API. The inspiration for this module was taken from Cameron Neylon's pyalm package. However, the approaches taken by the Python and Node.js languages are significantly different, and so this module cannot be considered a port of pyalm.
+
+</div>
 
 This wrapper was to be written for the Node.js platform, and published as a standalone package on Node.js' package manager, npm. The package is called nodealm, and can be downloaded by other developers looking to solve similar problems. This section describes the challenges faced when implementing this solution, and how the problems were addressed.
 

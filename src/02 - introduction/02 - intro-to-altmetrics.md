@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 1.1 Introduction to Altmetrics
 
 This project will focus on the field of altmetrics, a relatively new area of study within bibliometrics. As discussed in more depth in section 2.2, bibliometrics is the study of scientific literature itself, analysing it quantitatively to find so-called "impact". Impact is generated when a person gives credit, formally or informally, to others for their work. Some refer to this credit as "reuse", as one can be considered to be reusing the ideas of others in novel work.
+
+</div>
 
 In the past, this credit has been identified solely through a formal citation on a piece of scholarly literature. This method has been used for many years, mostly commonly in the form of the "impact factor", which is calculated by Thomson Reuters' Journal Citation Reports. This factor has been used for many purposes, most commonly to judge the value of a scholar's work.
 

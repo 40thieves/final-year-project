@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 3.4 Proposed Solution
 
 The following section describes the proposed solution to the requirements laid out in section 3.3. This solution is to create a web application that will assist altmetrics researchers in studying how altmetrics change over time. The application will consist of four parts that are described in detail in the sections 3.4.5 - 3.4.8, which will be combined into a single web application, described in section 3.4.1.
+
+</div>
 
 A web application will be created on the Node.js platform, written in the JavaScript language. This application will consist of a website that allows users to search for articles that they wish to view altmetrics data for, visualise this data, and allow them to save it in a database.
 
@@ -104,7 +108,7 @@ Requirement 4 describes the need for altmetrics data collection from an external
 | Transparency | Full source of the application used to generate the API is available under an Apache 2.0 License | Exact methods of data collection and calculation are proprietary |
 | Other comments | Not all data sources, such as Scopus citations, include historical metadata. This is a known issue that is registered on the API application issue tracker, where it is discussed this will be fixed for version 3 of the API | No data source captures article views or downloads |
 
-Table 1: A comparison of potential altmetrics data providers
+<figcaption>Table 1: A comparison of potential altmetrics data providers</figcaption>
 
 The ImpactStory API was initially considered, however it was discovered that this API has been deprecated and discontinued. However, an ImpactStory blog post discusses the possibility that it may be offered again "in the near future" ("New widget and API | Impactstory blog", 2012).
 
@@ -180,7 +184,7 @@ The application will serve the search form as a static web page, containing a fo
 | Publication date | Matches article's publication date                           |
 | DOI              | Matches an article's Digital Object Identifier               |
 
-Table 2: Input fields used for the scholarly article search form
+<figcaption>Table 2: Input fields used for the scholarly article search form</figcaption>
 
 Once the form is submitted, a request will be made to the application server with the attached search parameters. The parameters are received by the server and passed to the search API wrapper.
 

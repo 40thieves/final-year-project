@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 4.5 Storage Implementation
 
 This section discusses the implementation of the database within the application. Section 3.4.8 describes the proposed solution, a MongoDB database to store data returned by the altmetrics data collection module. This data will be stored against a unique key, so that it can be retrieved without having to fetch the data for a second time.
+
+</div>
 
 ##### 4.5.1 MongoDB
 

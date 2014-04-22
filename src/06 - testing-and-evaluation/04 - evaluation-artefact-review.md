@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 ##### 5.3.2 Artefact Review
 
 This section will evaluate the application and review the important issues highlighted during the implementation phase. Each major section from chapter 4 will be evaluated to review whether good decisions were made in this phase.
+
+</div>
 
 __Altmetrics Data Collection API Module__
 

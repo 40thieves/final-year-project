@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 4.3 Search Implementation
 
 This section will describe the implementation of the search module, as described in section 3.4.6. A wrapper around the PLOS Search API was created, producing a uniform interface to the API. By encapsulating the API logic in a module, the codebase will become cleaner and less verbose.
+
+</div>
 
 ##### 4.3.1 Package Publication
 

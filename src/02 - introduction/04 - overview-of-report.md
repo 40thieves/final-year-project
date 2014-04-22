@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 ### 1.3 Overview of Report
 
 This section will give a chapter-by-chapter overview of what is contained in this report. Summaries of the content of the chapter will be given for each.
+
+</div>
 
 Chapter 2 reviews the published literature on altmetrics, giving details on the history of bibliometrics, criticism of traditional metrics, including the impact factor, a breakdown of what altmetrics are, and evidence to support the usage of altmetrics. Criticism of altmetrics is then discussed and counter-arguments made. Finally, conclusions of the review are drawn and potential future work is detailed.
 

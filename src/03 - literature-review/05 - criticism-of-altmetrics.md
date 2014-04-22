@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 2.5 Criticism of Altmetrics
 
 Not all believe that altmetrics are a viable solution to the bibliometrics problem. They point to problems with data sources that can be misleading or to the ease with which altmetrics can be "gamed". These need to be addressed by the altmetrics community before they are accepted by the wider scientific institution.
+
+</div>
 
 ##### 2.5.1 Inadequate Data Sources
 

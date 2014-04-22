@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 4.4 Visualisation Implementation
 
 This section will discuss the implementation of the visualisation of altmetrics data. Section 3.4.7 describes the proposed solution for this requirement, a D3.js bubble chart comparing two altmetrics data sources against the total number of scholarly citations for a set of articles. Each bubble will be animated to show the passage of time, and how the data changed over this time period. To achieve these goals, a JavaScript library was created that will perform the chart creation and management process.
+
+</div>
 
 ##### 4.4.1 Asynchronous Module Definition
 

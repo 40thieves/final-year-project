@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 6.2 Report Summary
 
 Chapter 1 introduced the topic of altmetrics, briefly explaining the background and arguing the case for altmetrics. The chapter went on to discuss the lack of research into how altmetrics change over time and the goals of the project were outlined.
+
+</div>
 
 Chapter 2 reviewed the altmetrics literature, discussing the history of bibliometrics and the criticism of the impact factor. A more detailed description of what altmetrics are and a breakdown of common altmetric data sources was also given in this chapter. Evidence supporting altmetrics and disputing the relevance of altmetrics was then examined in more detail. Finally, conclusions were drawn on the altmetrics literature, finding that altmetrics are useful for measuring scientific impact, but more research is required in studying how altmetrics change over time. The project therefore must provide a tool for researchers to further investigate.
 

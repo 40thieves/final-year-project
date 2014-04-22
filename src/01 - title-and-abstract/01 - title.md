@@ -5,10 +5,12 @@
 
 <div id="title-text">
 Submitted in partial fulfilment of the requirements for the award of degree of BSc Web Technologies of the University of Portsmouth
+
 </div>
 
 <div id="date">
 April 2014
+
 </div>
 
 <div class="copyright">

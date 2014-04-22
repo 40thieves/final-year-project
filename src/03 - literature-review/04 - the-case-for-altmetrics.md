@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 2.4 The Case for Altmetrics
 
 There are a multitude of reasons for believing that altmetrics offer a viable option when measuring scholarly impact. The capability of altmetrics to measure more diverse forms of impact, with less delay, greater transparency and at enormous scales is exciting for those looking to improve scholarly impact measurement. Priem & Hemminger (2010) find that "altmetrics take advantage of the pervasiveness and importance of new tools (Web pages, search engines, e–journals) to inform broader, faster, and more open metrics of impact". New data sources allow altmetrics practitioners to explore the underlying properties of an article to "measure the distinct concept of social impact" (Eysenbach; 2011).
+
+</div>
 
 ##### 2.4.1 Correlation with Citations
 

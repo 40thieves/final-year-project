@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 5.2 Testing Summary
 
 In Chapters 3 and 4, an application was described that is designed to assist researchers examine how altmetrics change over time. In this section, the methods by which this application was tested are described. Three major tests were performed; section 5.2.1 describes the unit tests that were created during the design and implementation phase. Section 5.2.2 describes the usability tests that were performed after the application was completed. Finally, section 5.2.3 discusses the methods and results of further usability tests and acceptance tests from a sample of altmetrics researchers.
+
+</div>
 
 ##### 5.2.1 Unit Testing
 
@@ -43,7 +47,7 @@ Coverage, a term often used in relation to testing, refers to the amount of prod
 | Altmetrics data collection | 93.85%     | 84.85%   | 100%      | 93.85% |
 | Search                     | 96.97%     | 90.48%   | 100%      | 96.97% |
 
-Table 3: Testing coverage report, for the data collection and search modules
+<figcaption>Table 3: Testing coverage report, for the data collection and search modules</figcaption>
 
 Coverage of the web application part of the code base is poor. Time restrictions meant that few tests were written while developing this part of the application. However, this may not seriously affect the project, as much of the functionality of the web application extends the well tested Express framework, or Mongoose object-model map.
 

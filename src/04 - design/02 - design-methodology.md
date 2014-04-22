@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 3.2 Design Methodology
 
 The design and development of the system was supported by the methodology described in this section. The methodology is based on an agile approach that is similar to the Scrum approach.
+
+</div>
 
 Initially, the project took a waterfall approach during the research and initial design phase. This methodology takes a sequential approach where tasks are ordered and one task cannot start before another. One of the benefits of this methodology is that design must be done first, leading to greater efficiency later. It is useful in this situation, as there are few specific requirements early in the process, and research is required before design can start. Using this research, decisions about the direction and requirements for the system will be made, decisions that drive the design. The design of the system changed several times during the research phase, as more was discovered about the field of altmetrics. Research continued throughout the project, continually feeding into the design of the system.
 

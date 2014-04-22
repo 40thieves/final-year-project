@@ -1,6 +1,10 @@
+<div class="page-break-avoid">
+
 #### 3.3 Requirements
 
 A major goal of the system is to provide tools for those investigating altmetrics changes over a period of time. The tool(s) must be usable by members of the general public, not just by altmetrics researchers. Finally, the project will assess the suitability of new technologies for use in the artefact (see section 1.2). To achieve this, there are many requirements that are described in this section. Each requirement is numbered, for referencing later.
+
+</div>
 
 __Requirement 1. Visualisation of altmetrics data sources__
 
