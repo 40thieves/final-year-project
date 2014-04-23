@@ -85,6 +85,8 @@ Another best practice that is recognised by many Node.js developers is the file 
 
 There sometimes are variations on the naming conventions shown here, however, the `lib` directory will hold files containing the application logic, and the `test` directory contains the module's unit tests. The `app.js` file will bootstrap the module, exporting the necessary files from the module library. This will make the logic contained in the library available to Node.js.
 
+Finally, another indicator of good practice is documentation. The module includes a README file which gives installation and usage instructions. Additionally, inline documentation is provided in the module's main library file.
+
 <div class="page-break-avoid">
 
 ##### 4.2.2 Event Based Structure
