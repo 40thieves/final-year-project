@@ -40,3 +40,27 @@ A web site to present an interactive timeline showing the progression of bibliom
 
 Please find in the associated files, a web site in the Timeline directory. Source for the web site is also available at https://github.com/40thieves/altmetrics-timeline
 
+#### 8.7 Video demonstration showing walkthrough of the application
+
+A video showing the web application from boot, to generation of a visualisation.
+
+Please find in the associated files, under the Videos directory. The video is also available on YouTube at https://www.youtube.com/watch?v=frh3g2LEMv8
+
+#### 8.8 Video demonstration showing the visualisation
+
+A video showing the features of the visualisation
+
+Please find in the associated files, under the Videos directory. The video is also available on YouTube at https://www.youtube.com/watch?v=lnCuRcbS8G0
+
+#### 8.9 Video demonstration showing altmetrics data storage
+
+A video demonstrating altmetrics data storage in MongoDB.
+
+Please find in the associated files, under the Videos directory. The video is also available on YouTube at https://www.youtube.com/watch?v=VjNfI1hnedk
+
+#### 8.10 Video demonstration showing selected article storage
+
+A video showing selected articles stored in localStorage, and selected articles being appended to search results.
+
+Please find in the associated files, under the Videos directory. The video is also available on YouTube at https://www.youtube.com/watch?v=6QMs4oUfN2I
+
