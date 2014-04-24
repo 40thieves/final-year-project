@@ -78,7 +78,7 @@ This requirement is fully met by the application. The data is stored after it is
 
 <div class="page-break-avoid">
 
-__Requirement 6. Easy to use__
+__Requirement 6. Ease of use__
 
 This requirement states the artefact must be easy to use by users who are not familiar with altmetrics terms as well as those not in the technology industry. Therefore, an understandable user interface must be developed, that does not use obscure altmetrics-related vocabulary. A good visual design will help to differentiate the project from other scientific software.
 

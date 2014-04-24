@@ -72,7 +72,7 @@ In addition, the system must provide a mechanism for accessing the stored visual
 
 <div class="page-break-avoid">
 
-__Requirement 6. Easy to use__
+__Requirement 6. Ease of use__
 
 The secondary goal of the project states that the system must be easily understandable by users who are not familiar with technical altmetrics terms and those outside of the technology industry. The project is aimed at users in scientific fields and the general public, who do not have a background in computer science and therefore cannot be expected to understand complex systems or obscure vocabulary. The system must not be confusing to use.
 

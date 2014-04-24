@@ -205,7 +205,6 @@ The application will serve the search form as a static web page, containing a fo
 | Author           | Matches article's author name                                |
 | Journal          | Matches article's journal name                               |
 | Subject area     | Matches an article's subject area (taken from PLOS taxonomy) |
-| Publication date | Matches article's publication date                           |
 | DOI              | Matches an article's Digital Object Identifier               |
 
 <figcaption>Table 2: Input fields used for the scholarly article search form</figcaption>
